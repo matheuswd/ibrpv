@@ -1,0 +1,6 @@
+_development/**
+.editorconfig
+.gitkeep
+.gitignore
+.deployignore
+README.md

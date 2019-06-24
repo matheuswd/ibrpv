@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+/// Get a single value for a type style attribute. Gives you the mobile by default but you can define the $screen-size as 'desktop' to get the desktop value if it exists.
+///
+/// @example scss - Hero heading
+///     .heading {
+///         font-size: type-value('hero-heading', 'desktop');
+///     }
+
+@function type-value($style, $attribute, $screen-size: 'mobile') {
+    $type-attributes: map-get($type-styles, $style);
+    $type-attributes-desktop: map-get($type-styles-desktop, $style);
+
+    @if not $type-attributes {
+        @error 'Type style not defined: `#{$style}`';
+    }
+
+    @if $type-attributes and $screen-size == 'mobile' {
+        @if map-get($type-attributes, $attribute) {
+            @return map-get($type-attributes, $attribute);
+        }
+
+        @else {
+            @warn 'Attribute not found in $type-attributes: `#{$attribute}`';
+        }
+    }
+
+    @if $type-attributes-desktop and $screen-size == 'desktop' {
+        @if map-get($type-attributes-desktop, $attribute) {
+            @return map-get($type-attributes-desktop, $attribute);
+        }
+
+        @else {
+            @warn 'Attribute not found in $type-attributes-desktop: `#{$attribute}`';
+        }
+    }
+}

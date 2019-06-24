@@ -1,0 +1,23 @@
+.widget {
+    margin-bottom: space(layout);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &-title {
+        @include heading(h5);
+
+        margin-top: 0;
+    }
+
+    ul {
+        @include list-reset;
+        @include no-first-last-margin;
+
+        > li {
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+        }
+    }
+}

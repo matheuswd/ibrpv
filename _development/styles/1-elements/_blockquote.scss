@@ -1,0 +1,8 @@
+blockquote {
+    @include no-first-last-margin;
+
+    padding: space(paragraph);
+    margin-right: 0;
+    margin-left: 0;
+    border-left: (space(paragraph) / 2) solid currentColor;
+}

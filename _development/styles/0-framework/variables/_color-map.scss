@@ -1,0 +1,18 @@
+// ---------------------------------------------------
+// Color maps can be used for button generation and other
+// areas where we need workable color combinations
+// ---------------------------------------------------
+// This is up for deprecation, let team know if you end
+// up using this before the end of march 2019. If not
+// it will be removed.
+// ---------------------------------------------------
+$color-map: (
+    black: (
+        background: color('black'),
+        foreground: color('white'),
+    ),
+    white: (
+        background: color('white'),
+        foreground: color('black'),
+    ),
+);

@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+
+/// Helper function to retrieve a color map defined in variables.
+/// If a state parameter is passed as well, the particular state will be returned
+/// Useful for removing random colors used in the code base and generating component variations
+///
+/// @param {string} $color - The name of the color as defined in the sass map
+///
+/// @param {string} $state [false] - The name of the state as defined in the sass map
+///
+/// @example scss
+///    $map: color-map('red');
+///
+///    color: map-get($map, 'frontend');
+///
+/// @example scss
+///    color: color-map('red', 'frontend');
+///
+/// @access public
+
+@function color-map($color, $state: false) {
+    // Does the color map requesting exist
+    @if map-has-key($color-map, $color) == false {
+        @error 'Color-map not defined: `#{$color}`';
+    }
+
+    // Get the color map
+    $map: map-get($color-map, $color);
+
+    // Check if state was requested
+    // If not return the map
+    @if $state == false {
+        @return $map;
+    }
+
+    // Check if the state exists
+    @if map-has-key($map, $state) == false {
+        @error 'Color-map state not defined: `#{$color}` - `#{$state}`';
+    }
+
+    // Return the state
+    @return map-get($map, $state);
+}

@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include type-style('headings');
+}
+
+h1 {
+    @include type-style('h1');
+}
+
+h2 {
+    @include type-style('h2');
+}
+
+h3 {
+    @include type-style('h3');
+}
+
+h4 {
+    @include type-style('h4');
+}
+
+h5 {
+    @include type-style('h5');
+}
+
+h6 {
+    @include type-style('h6');
+}

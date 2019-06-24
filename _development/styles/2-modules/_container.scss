@@ -1,0 +1,5 @@
+.container {
+    @include make-container;
+
+    max-width: $container-max-width;
+}

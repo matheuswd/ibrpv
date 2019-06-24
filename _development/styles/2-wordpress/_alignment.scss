@@ -1,0 +1,18 @@
+.alignnone {
+    // margin: 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto space(paragraph);
+}
+
+.alignright {
+    margin: space(paragraph) / 2 0 space(paragraph) space(paragraph);
+    float: right;
+}
+
+.alignleft {
+    margin: space(paragraph) / 2 space(paragraph) space(paragraph) 0;
+    float: left;
+}

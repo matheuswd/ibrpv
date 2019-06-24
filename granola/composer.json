@@ -1,0 +1,12 @@
+{
+    "name": "wholegraindigital/granola",
+    "require": {
+        "tgmpa/tgm-plugin-activation": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "Wholegrain Digital",
+            "email": "eat@wholegraindigital.com"
+        }
+    ]
+}

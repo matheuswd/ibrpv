@@ -1,0 +1,14 @@
+.burger {
+    @include burger(40px, 6px);
+
+    &:hover,
+    &:focus {
+        @include burger-hover(40px, 6px);
+
+        transform: scale(1.05);
+    }
+
+    &.active {
+        @include burger-active(40px, 6px);
+    }
+}

@@ -1,0 +1,44 @@
+//--------------------------------------------------------------
+// Gallery
+//--------------------------------------------------------------
+.gallery {
+    @include make-row;
+
+    > * {
+        @include make-column;
+    }
+
+    &-columns {
+        @for $i from 1 through 9 {
+            &-#{$i} {
+                > * {
+                    flex-basis: calc(100% / #{$i});
+                }
+            }
+        }
+    }
+
+    // &-item {
+
+    // }
+
+    // &-caption {
+    //     Same as wp-caption-text but when its in a gallery content
+    // }
+
+    &-icon {
+        @include object-fit;
+
+        &.landscape {
+            padding-top: ratio(landscape);
+        }
+
+        &.portrait {
+            padding-top: ratio(portrait);
+        }
+
+        img {
+            @include object-fit-asset;
+        }
+    }
+}

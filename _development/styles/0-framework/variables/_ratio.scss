@@ -1,0 +1,19 @@
+// ---------------------------------------------------
+// Ratios we intent to use in the project
+// These are best used with object fit and iframes
+// ---------------------------------------------------
+$ratios: (
+    'square': (
+        'width': 1,
+        'height': 1
+    ), 'landscape': (
+        'width': 6,
+        'height': 4
+    ), 'portrait': (
+        'width': 4,
+        'height': 6
+    ), 'widescreen': (
+        'width': 16,
+        'height': 9
+    )
+);

@@ -1,0 +1,42 @@
+.navigation {
+    margin-top: space(layout);
+    margin-bottom: space(layout);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    > * {
+        margin-right: 1em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a,
+    .current {
+        display: block;
+        padding: 0.1em 0.7em;
+        background-color: color('black');
+        border-radius: $base-border-radius;
+        color: color('white');
+        text-decoration: none;
+        transition: transition(background-color);
+
+        &:hover {
+            background-color: color('black');
+            color: color('white');
+        }
+    }
+}
+
+.page-numbers {
+    &.current {
+        background-color: color('black');
+        color: color('white');
+    }
+}

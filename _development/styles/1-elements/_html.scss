@@ -1,0 +1,9 @@
+html {
+    @include alias-text;
+
+    background-color: $base-background;
+    color: $base-color;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+}

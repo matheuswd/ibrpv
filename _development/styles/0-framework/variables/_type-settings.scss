@@ -1,0 +1,121 @@
+// ---------------------------------------------------
+// Heading Variables
+// ---------------------------------------------------
+$heading-color: inherit;
+$heading-font-family: inherit;
+$heading-font-weight: inherit;
+$heading-line-height: 1.2;
+
+// ---------------------------------------------------
+// Other Type Variables
+// ---------------------------------------------------
+$base-font-size: 20px;
+$large-font-size: 22px;
+$small-font-size: 14px;
+$tiny-font-size: 12px;
+
+$base-font-weight: 400;
+$base-bold-font-weight: bold;
+$base-line-height: 1.5;
+
+$base-font-family: 'system-ui';
+$heading-font-family: inherit;
+
+$type-styles: (
+    headings: (
+        font-family: $heading-font-family,
+        font-weight: 700,
+        color: inherit,
+        margin-top: 0,
+        margin-bottom: 10px,
+    ),
+
+    h1: (
+        font-size: em(30),
+        line-height: 1.2,
+    ),
+
+    h2: (
+        font-size: em(30),
+        line-height: 1.2,
+    ),
+
+    h3: (
+        font-size: em(22),
+        line-height: 1.2,
+    ),
+
+    h4: (
+        font-size: em(20),
+        line-height: 1.2,
+    ),
+
+    h5: (
+        font-size: em(18),
+        line-height: 1.2,
+    ),
+
+    h6: (
+        font-size: em(18),
+        line-height: 1.2,
+    ),
+
+    hero-heading: (
+        font-size: em(50),
+        line-height: 1.1,
+    ),
+
+    body-text-large: (
+        font-weight: 700,
+        font-size: em($base-font-size),
+        line-height: $base-line-height,
+    ),
+
+    body-text: (
+        font-weight: 700,
+        font-size: em($base-font-size),
+        line-height: $base-line-height,
+    ),
+
+    paragraph-text: (
+        font-weight: 400,
+        font-size: em($base-font-size),
+        line-height: $base-line-height,
+    ),
+
+    paragraph-text-small: (
+        font-weight: 400,
+        font-size: em($small-font-size),
+        line-height: 1.4,
+    ),
+
+    tiny-text: (
+        font-weight: 400,
+        font-size: em($tiny-font-size),
+        line-height: 1.2,
+    ),
+);
+
+// Overrides for Desktop
+$type-styles-desktop: (
+    h1: (
+        font-size: em(62),
+    ),
+
+    h2: (
+        font-size: em(62),
+    ),
+
+    h3: (
+        font-size: em(30),
+    ),
+
+    hero-heading: (
+        font-size: em(85),
+    ),
+
+    body-text-large: (
+        font-size: em($large-font-size),
+        line-height: 1.4,
+    ),
+);

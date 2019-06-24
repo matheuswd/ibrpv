@@ -1,0 +1,21 @@
+.header {
+    padding-top: space(gutter);
+    padding-bottom: space(gutter);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        width: 160px;
+    }
+
+    &__burger {
+        @include mq(large) {
+            display: none;
+        }
+    }
+}

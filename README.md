@@ -1,2 +1,1 @@
-# ibrpv
 IBRPV WordPress Theme

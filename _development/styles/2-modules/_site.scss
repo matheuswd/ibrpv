@@ -1,0 +1,10 @@
+// ----------------------------------------------
+// Wraps all content on the page to prevent
+// scrolling horizontal. Cant just apply this to
+// a body tag because bugs in browsers
+// ----------------------------------------------
+.site {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+}

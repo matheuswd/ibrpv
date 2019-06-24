@@ -1,0 +1,64 @@
+// ---------------------------------------------------
+// DEVELOPMENT MODE
+// ---------------------------------------------------
+$granola-development: false;
+
+// ---------------------------------------------------
+// Base settings
+// ---------------------------------------------------
+$base-background: color('white');
+$base-color: color('black');
+$base-focus-color: color('blue');
+$base-border-radius: 0;
+$base-dark-percentage: 10%;
+
+$container-max-width: 1200px;
+
+// ---------------------------------------------------
+// Text links
+// ---------------------------------------------------
+$link-color-base: inherit;
+$link-color-hover: inherit;
+
+// ---------------------------------------------------
+// Text selection
+// ---------------------------------------------------
+$selection-color: color('white');
+$selection-background: color('black');
+
+// ---------------------------------------------------
+// Buttons
+// ---------------------------------------------------
+$button-active-states: false;
+$button-padding-vertical: 0.25em;
+$button-padding-horizontal: 0.5em;
+
+// ---------------------------------------------------
+// Horizontal rule styling
+// ---------------------------------------------------
+$hr-color: currentColor;
+$hr-thickness: 1px;
+
+// ---------------------------------------------------
+// Transitions
+// ---------------------------------------------------
+$transition-time: 0.3s;
+$transition-ease: ease-in-out;
+
+// ---------------------------------------------------
+// Form Styling
+// ---------------------------------------------------
+$input-background: transparent;
+$input-border-thickness: 1px;
+$input-border-color: currentColor;
+$input-color: inherit;
+$input-custom-select: false;
+$input-focus-color: $base-focus-color;
+$input-gap: space(paragraph) / 2;
+$input-padding: 0.85em;
+$input-placeholder-color: rgba($base-color, 0.8);
+$input-radius: $base-border-radius;
+$form-error-message-color: color('red');
+$label-spacing: space(paragraph) / 4;
+$textarea-height: 100px;
+$gf-list-icon-size: 1rem;

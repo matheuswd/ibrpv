@@ -1,0 +1,9 @@
+* {
+    // compensates for us adding margin top to things
+    @include no-first-last-margin;
+}
+
+body {
+    margin: 9px 10px; // This is the editor default margin
+    font-family: inherit;
+}

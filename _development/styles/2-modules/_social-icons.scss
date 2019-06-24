@@ -1,0 +1,31 @@
+// <ul class="social-icons">
+//     <li>
+//         <a href="#">
+//             <svg class="icon icon-facebook"><use xlink:href="<?php echo get_template_directory_uri(); ?>/icons/symbol-defs.svg#icon-facebook"></use></svg>
+//         </a>
+//     </li>
+//     <li>
+//         <a href="#">
+//             <svg class="icon icon-twitter"><use xlink:href="<?php echo get_template_directory_uri(); ?>/icons/symbol-defs.svg#icon-twitter"></use></svg>
+//         </a>
+//     </li>
+//     <li>
+//         <a href="#">
+//             <svg class="icon icon-google"><use xlink:href="<?php echo get_template_directory_uri(); ?>/icons/symbol-defs.svg#icon-google"></use></svg>
+//         </a>
+//     </li>
+// </ul>
+
+.social-icons {
+    @include list-reset;
+    @include list-inline(space(gutter) / 2);
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .icon {
+        display: block;
+    }
+}

@@ -1,0 +1,102 @@
+// --------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------
+// Welcome to Granola styles
+// The following code is broken up in to two main sections
+// - Code that doesn't output any CSS
+// - Code that outputs CSS
+// For reference, the code output begins with resets and box model setup
+// --------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------
+
+// ----------------------------------------------
+// Import the framework
+// ----------------------------------------------
+@import './0-framework/framework';
+
+// ----------------------------------------------
+// Reset the things
+// ----------------------------------------------
+@import './1-resets/box-sizing';
+@import 'normalize.css/normalize.css';
+
+// ----------------------------------------------
+// Elements
+// ----------------------------------------------
+@import './1-elements/fonts';
+@import './1-elements/html';
+@import './1-elements/body';
+@import './1-elements/type';
+@import './1-elements/headings';
+@import './1-elements/table';
+@import './1-elements/figure';
+@import './1-elements/blockquote';
+@import './1-elements/selection';
+@import './1-elements/forms';
+@import './1-elements/img';
+@import './1-elements/a';
+@import './1-elements/iframe';
+@import './1-elements/hr';
+@import './1-elements/svg';
+@import './1-elements/button';
+
+// ----------------------------------------------
+// Dependencies
+// ----------------------------------------------
+@import './2-dependencies/gravity-forms';
+@import './2-dependencies/lazy-load';
+
+// ----------------------------------------------
+// Modules
+// A reusable piece of styling that
+// can be used to put other things together
+// ----------------------------------------------
+// @import './2-modules/burger';
+@import './2-modules/container';
+@import './2-modules/img-fit';
+@import './2-modules/responsive-embed';
+@import './2-modules/site';
+// @import './2-modules/social-icons';
+
+// ----------------------------------------------
+// Guten
+// Styling for Gutenberg blocks
+// ----------------------------------------------
+// @import './2-guten/color-palette-support';
+
+// ----------------------------------------------
+// WordPress
+// ----------------------------------------------
+@import './2-wordpress/alignment';
+@import './2-wordpress/caption';
+@import './2-wordpress/gallery';
+@import './2-wordpress/image';
+@import './2-wordpress/pag-nav';
+@import './2-wordpress/screen-reader-text';
+@import './2-wordpress/search-form';
+@import './2-wordpress/widget';
+@import './2-wordpress/widget_calendar';
+@import './2-wordpress/widget_media_gallery';
+
+// ----------------------------------------------
+// Sections
+// Most of the time this will be a content block.
+// But really is anything that represents a finished item
+// ----------------------------------------------
+@import './3-layout/header';
+@import './3-layout/header-navigation';
+@import './3-layout/footer';
+
+// ----------------------------------------------
+// Templates
+// ----------------------------------------------
+// @import './4-templates/xxxxx';
+
+// ----------------------------------------------
+// Trumps
+// ----------------------------------------------
+// @import './5-trumps/no-scroll';
+
+// ----------------------------------------------
+// Hacks
+// ----------------------------------------------
+// @import './6-hacks/ie';

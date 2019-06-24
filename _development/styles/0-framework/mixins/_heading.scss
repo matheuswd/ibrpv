@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/// Generate heading styling with attributes and sizes. Uses type-style() mixin.
+///
+/// @param {string} $heading - The heading to generate styling for
+///
+/// @example scss
+///    @include heading(h1);
+///
+/// @access public
+
+@mixin heading($heading) {
+    @include heading-attributes($heading);
+    @include type-style($heading);
+}
+
+/// Generate heading attributes (without sizes).
+/// For improved default usability, links within heading attribute elements have
+/// had their styling reset to inherited.
+///
+/// @example scss
+///    @include heading-attributes;
+///
+/// @access public
+
+@mixin heading-attributes($heading: '') {
+    @include type-style('headings');
+
+    // Make a tags that are children of headings inherit styling
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
