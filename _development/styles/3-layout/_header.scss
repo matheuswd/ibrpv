@@ -10,12 +10,16 @@
 
     &__logo {
         display: block;
-        width: 160px;
+        width: 300px;
     }
 
     &__burger {
         @include mq(large) {
             display: none;
         }
+    }
+
+    &__navigation {
+
     }
 }
