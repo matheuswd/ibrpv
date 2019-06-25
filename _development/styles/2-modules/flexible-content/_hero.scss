@@ -1,0 +1,32 @@
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+
+    /* Background */
+    background-image: url(../images/ibrpv.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .intro-text {
+    /* Text styles */
+    text-align: center;
+    color: white; /* ADD THIS LINE */
+
+        h1 {
+            /* Text styles */
+            font-size: 5em;
+            
+            /* Margins */
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        p {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    
+}
