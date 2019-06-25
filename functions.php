@@ -17,3 +17,5 @@ require_once 'granola/granola.php';
 // in the function folder and not in the granola folder
 // ----------------------------------------------------
 require_once 'functions/image-optimisation.php';
+
+wp_enqueue_script("jquery");

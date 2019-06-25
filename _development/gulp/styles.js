@@ -61,7 +61,7 @@ gulp.task('styles:dev', () => {
             autoprefixer(),
             cssnano()
         ]))
-        .pipe(sourcemaps.write ('.'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dest))
         .pipe(browserSync.stream())
 

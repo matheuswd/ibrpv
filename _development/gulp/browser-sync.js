@@ -15,5 +15,5 @@ import browsersync from 'browser-sync';
 // Init browser sync so its good to go
 // ----------------------------------------
 gulp.task('browser-sync', () => browsersync.init({
-        proxy: process.env.BROWSERSYNC_PROXY
+    proxy: process.env.BROWSERSYNC_PROXY
 }));

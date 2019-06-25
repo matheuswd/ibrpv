@@ -18,16 +18,13 @@ gulp.task('cache-bust', () => {
     fs.writeFile(
         // File to write to
         config.paths.timestamp,
-
         // Contents of file
         Math.floor(Date.now() / 1000),
-
         // Options for the file
         {},
-
         // Callback
-        function(err){
-            if(err){
+        function (err) {
+            if (err) {
                 throw err;
             }
         }
