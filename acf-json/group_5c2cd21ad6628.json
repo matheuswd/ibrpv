@@ -135,6 +135,112 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d12653105126": {
+                    "key": "layout_5d12653105126",
+                    "name": "time_section",
+                    "label": "Seção de Horários",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d12654405127",
+                            "label": "Cultos",
+                            "name": "services",
+                            "type": "repeater",
+                            "instructions": "Crie a quantidade de cultos que você desejar.\r\nAo menos 1 culto e o máximo de 3 cultos.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 3,
+                            "layout": "row",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d12661e05128",
+                                    "label": "Dia do culto",
+                                    "name": "service_day",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Segunda-feira": "Segunda-feira",
+                                        "Terça-feira": "Terça-feira",
+                                        "Quarta-feira": "Quarta-feira",
+                                        "Quinta-feira": "Quinta-feira",
+                                        "Sexta-feira": "Sexta-feira",
+                                        "Sábado": "Sábado",
+                                        "Domingo": "Domingo"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5d12666005129",
+                                    "label": "Horário do Culto",
+                                    "name": "service_time",
+                                    "type": "text",
+                                    "instructions": "Siga o seguinte padrão abaixo:\r\n\r\nSomente horas: 20h\r\nHoras e minutos: 20h30",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5d12670f9044d",
+                                    "label": "Tipo de culto",
+                                    "name": "service_type",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Culto de Doutrina": "Culto de Doutrina",
+                                        "Culto ao Senhor": "Culto ao Senhor",
+                                        "Escola Bíblica": "Escola Bíblica"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -161,5 +267,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561447236
+    "modified": 1561487148
 }
