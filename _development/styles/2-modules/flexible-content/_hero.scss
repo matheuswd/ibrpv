@@ -1,3 +1,8 @@
+.header {
+    position: fixed;
+    width: 100%;
+}
+
 .hero {
     /* Sizing */
     width: 100vw;
@@ -9,7 +14,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    
     .intro-text {
     /* Text styles */
     text-align: center;
