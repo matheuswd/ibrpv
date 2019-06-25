@@ -138,14 +138,14 @@
                 },
                 "layout_5d12653105126": {
                     "key": "layout_5d12653105126",
-                    "name": "time_section",
+                    "name": "services",
                     "label": "Seção de Horários",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5d12654405127",
                             "label": "Cultos",
-                            "name": "services",
+                            "name": "the_services",
                             "type": "repeater",
                             "instructions": "Crie a quantidade de cultos que você desejar.\r\nAo menos 1 culto e o máximo de 3 cultos.",
                             "required": 0,
@@ -226,7 +226,8 @@
                                     "choices": {
                                         "Culto de Doutrina": "Culto de Doutrina",
                                         "Culto ao Senhor": "Culto ao Senhor",
-                                        "Escola Bíblica": "Escola Bíblica"
+                                        "Escola Bíblica": "Escola Bíblica",
+                                        "Koinonya": "Koinonya"
                                     },
                                     "default_value": [],
                                     "allow_null": 0,
@@ -267,5 +268,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561487148
+    "modified": 1561497433
 }
