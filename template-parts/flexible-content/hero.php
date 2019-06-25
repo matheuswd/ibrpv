@@ -4,13 +4,7 @@ $hero_title = ($args['hero_title']) ? $args['hero_title'] : false;
 $hero_image = ($args['hero_image']) ? $args['hero_image'] : false;
 $hero_intro = ($args['hero_intro']) ? $args['hero_intro'] : false;
 
-?>
-
-<?php
-
-if( $hero_image ) {
-?>
-
+if ($hero_image) { ?>
 <section class="hero">
     <div class="hero-inner">
         
@@ -21,10 +15,7 @@ if( $hero_image ) {
     </div>
 </section>
 
-<?php
-
-} else {
-?>
+<?php } else { ?>
 <section class="hero">
     <div class="hero-inner">
         <header class="header">
@@ -40,7 +31,4 @@ if( $hero_image ) {
         </header>
     </div>
 </section>
-<?php
-}
-
-?>
+<?php } ?>

@@ -1,6 +1,11 @@
 .header {
     position: fixed;
     width: 100%;
+
+    &.scrolled {
+        background-color: #fff !important;
+        transition: background-color 200ms linear;
+    }
 }
 
 .hero {

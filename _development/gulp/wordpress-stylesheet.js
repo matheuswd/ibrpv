@@ -17,10 +17,10 @@ gulp.task('wordpress-stylesheet', () => {
     let content = '/*' + newline;
 
     // Loop through each of the wordpress keys and add them to the string
-    for(let index in config.wordpress) {
-       if (config.wordpress.hasOwnProperty(index)) {
-           content += index + ": " + config.wordpress[index] + newline;
-       }
+    for (let index in config.wordpress) {
+        if (config.wordpress.hasOwnProperty(index)) {
+            content += index + ": " + config.wordpress[index] + newline;
+        }
     }
 
     // Close the comments
@@ -35,8 +35,8 @@ gulp.task('wordpress-stylesheet', () => {
         // Options for the file
         {},
         // Callback
-        function(err){
-            if(err){
+        function (err) {
+            if (err) {
                 throw err;
             }
         }

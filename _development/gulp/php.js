@@ -18,8 +18,8 @@ import gutil from 'gutil';
 // ----------------------------------------
 gulp.task('php', () => {
     return gulp.src(config.paths.php)
-    	// Compares all PHP files with PSR-2
-    	.pipe(phpcs({
+        // Compares all PHP files with PSR-2
+        .pipe(phpcs({
             bin: 'vendor/bin/phpcs',
             standard: 'PSR2',
             severity: 5,
@@ -33,7 +33,7 @@ gulp.task('php', () => {
 
 gulp.task('php:dev', () => {
     return gulp.src(config.paths.php)
-        // Updates all code to follow PSR-2 
+        // Updates all code to follow PSR-2
         .pipe(phpcbf({
             bin: 'vendor/bin/phpcbf',
             standard: 'PSR2',

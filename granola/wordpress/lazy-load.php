@@ -84,8 +84,7 @@ function granola_convert_image($match)
     $attributes = granola_get_img_attributes($match[0]);
     $output = '';
 
-    if(array_key_exists('class', $attributes) && strpos($attributes['class'], GRANOLA_LAZY_LOAD_CLASS)) {
-
+    if (array_key_exists('class', $attributes) && strpos($attributes['class'], GRANOLA_LAZY_LOAD_CLASS)) {
         if (GRANOLA_LAZY_LOAD_PLACEHOLDER === true) {
             // Strip dimensions from the src url
             $clean_src = preg_replace("/-\d+[Xx]\d+\./", ".", $attributes['src']);
@@ -120,13 +119,14 @@ function granola_convert_image($match)
     return $output;
 }
 
-function granola_no_js_image($attributes) {
-    if(array_key_exists('data-src', $attributes)) {
+function granola_no_js_image($attributes)
+{
+    if (array_key_exists('data-src', $attributes)) {
         $attributes['src'] = $attributes['data-src'];
         unset($attributes['data-src']);
     }
 
-    if(array_key_exists('data-srcset', $attributes)) {
+    if (array_key_exists('data-srcset', $attributes)) {
         $attributes['srcset'] = $attributes['data-srcset'];
         unset($attributes['data-srcset']);
     }
