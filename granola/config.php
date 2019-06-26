@@ -70,16 +70,16 @@ $GRANOLA_MENUS = [
 // ----------------------------------------------------
 // Plugins
 // ----------------------------------------------------
-// $GRANOLA_ACF_OPTIONS_PAGES = [
-//     'General',
-// ];
+$GRANOLA_ACF_OPTIONS_PAGES = [
+    'Geral',
+];
 
 
 // ----------------------------------------------------
 // MIME Types
 // ----------------------------------------------------
 $GRANOLA_MIME_TYPES = [
-    // 'svg' => 'image/svg+xml',
+    'svg' => 'image/svg+xml',
     // 'msg  => 'application/vnd.ms-outlook',
     // 'flv  => 'video/x-flv',
     // 'xls  => 'application/application/excel',
