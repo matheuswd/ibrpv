@@ -1,10 +1,11 @@
 .header {
     position: fixed;
     width: 100%;
+    transition: background-color 300ms linear;
 
     &.scrolled {
         background-color: #fff !important;
-        transition: background-color 200ms linear;
+        transition: background-color 300ms linear;
     }
 }
 
