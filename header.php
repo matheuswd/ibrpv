@@ -12,7 +12,7 @@
     <header class="header">
         <div class="header__inner container">
             <a class="header__logo" href="<?php echo esc_url(home_url('/')); ?>">
-            <?php echo granola_svg('logo-ibrpv-white', [
+            <?php echo granola_svg(get_field('light_logo', 'option')['name'], [
                     'title' => get_bloginfo('name'),
                     'description' => get_bloginfo('description'),
                 ]); ?>
