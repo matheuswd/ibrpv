@@ -7,15 +7,6 @@
     <?php wp_head(); ?>
 </head>
 
-<script>
-jQuery(function () {
-    jQuery(document).scroll(function () {
-        var nav = jQuery(".header");
-        nav.toggleClass('scrolled', jQuery(this).scrollTop() > nav.height());
-    });
-});
-</script>
-
 <body <?php body_class(); ?>>
     <?php echo granola_render('template-parts/header/skip-link'); ?>
     <header class="header">
