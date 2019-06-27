@@ -1,16 +1,31 @@
-// $fonts: (
-//     (
-//         'name': roboto,
-//         'asset': '/fonts/Roboto-Black',
-//         'weight': 900,
-//         'style': normal,
-//         'ext': woff2 ttf
-//     ),
-//     (
-//         'name': roboto,
-//         'asset': '/fonts/Roboto-BlackItalic',
-//         'weight': 900,
-//         'style': italic,
-//         'ext': woff2 ttf
-//     ),
-// );
+/**/
+$fonts: (
+    (
+        'name': 'Oswald',
+        'asset': '../assets/fonts/Oswald',
+        'weight': 300,
+        'style': normal,
+        'ext': ttf
+    ),
+    //  (
+	//      'name': 'Gotham Book',
+	//      'asset': '../assets/fonts/GothamBook',
+	//      'weight': 400,
+	//      'style': normal,
+	//      'ext': woff2 woff
+    //  ),
+    //  (
+	//      'name': 'Gotham Medium',
+	//      'asset': '../assets/fonts/GothamMedium',
+	//      'weight': 400,
+	//      'style': normal,
+	//      'ext': woff2 woff
+    //  ),
+    //  (
+	//      'name': 'Gotham Bold',
+	//      'asset': '../assets/fonts/GothamBold',
+	//      'weight': 700,
+	//      'style': normal,
+	//      'ext': woff2 woff
+    //  ),
+);
