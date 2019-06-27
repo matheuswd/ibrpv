@@ -242,6 +242,40 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d15329adde9b": {
+                    "key": "layout_5d15329adde9b",
+                    "name": "featured_post",
+                    "label": "Post em destaque",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d1532a8dde9c",
+                            "label": "Post destacado",
+                            "name": "featured_post",
+                            "type": "radio",
+                            "instructions": "Se você escolher mostrar o último post em destaque, será mostrado o último post em destaque. Caso contrário, o último post adicionado ao site será o escolhido.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Post em destaque": "Post em destaque",
+                                "Último post": "Último post"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -268,5 +302,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1561497433
+    "modified": 1561670604
 }
