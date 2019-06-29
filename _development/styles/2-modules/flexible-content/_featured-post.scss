@@ -1,0 +1,53 @@
+.featured-post {
+    @include make-row;
+    margin-top: space('gutter--desktop');
+
+    &__thumbnail {
+        width: 100%;
+
+        img {
+            padding: space('gutter--desktop');
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding-right: space('gutter--desktop');
+        padding-left: space('gutter--desktop');
+
+        ul {
+            @include list-reset-hard;
+
+            li {
+                display: inline-flex;
+                margin-right: space('gutter');
+            }
+        }
+    }
+
+    @include mq(medium) {
+        &__thumbnail {
+            width: 50%;
+        }
+    
+        &__content {
+            width: 50%;
+            padding: space('gutter');
+            position: relative;
+
+            h1 {
+                font-family: $base-heading-font;
+            }
+
+            a.readmore {
+                position: absolute;
+                bottom: space('gutter--desktop');
+                left: space('gutter');
+
+                &:hover {
+                    cursor: pointer !important;
+                }
+            }
+        }
+    }
+}
