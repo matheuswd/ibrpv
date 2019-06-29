@@ -4,6 +4,7 @@
 import objectFit from './polyfills/object-fit';
 import './helpers/skip-link-focus-fix';
 import './helpers/lazy-load';
+import './components/menu';
 
 const Granola = () => {
     // ------------------------------------------------------------------

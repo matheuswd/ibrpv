@@ -10,42 +10,41 @@
 }
 
 .hero {
-    /* Sizing */
-    width: 100vw;
-    height: 100vh;
-
-    /* Background */
-    background-image: url(../images/ibrpv.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     
     /* Flexbox stuff */
     display: flex;
-    justify-content: center;
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
     align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+
+    /* Background */
+    background-image: url('../images/ibrpv.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
     /* Text styles */
     text-align: center;
     
     .intro-text {
-    /* Text styles */
-    text-align: center;
-    color: white; /* ADD THIS LINE */
+        color: #fff;
+        text-align: center;
 
         h1 {
-            /* Text styles */
-            font-size: 5em;
             
             /* Margins */
             margin-top: 0;
             margin-bottom: 0.5em;
+            /* Text styles */
+            font-size: 5em;
         }
+
         p {
             width: 80%;
             margin: 0 auto;
         }
-    }
-    
+    }   
 }

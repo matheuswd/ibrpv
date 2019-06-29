@@ -9,6 +9,7 @@
 
 <body <?php body_class(); ?>>
     <?php echo granola_render('template-parts/header/skip-link'); ?>
+    <div class="header-wrap">
     <header class="header">
         <div class="header__inner container">
             <a class="header__logo" href="<?php echo esc_url(home_url('/')); ?>">
@@ -20,4 +21,5 @@
             <?php echo granola_render('template-parts/header/menu'); ?>
         </div>
     </header>
+    </div>
     <div class="site" id="maincontent">

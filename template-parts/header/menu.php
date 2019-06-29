@@ -16,13 +16,15 @@
             'aria-controls' => 'main-menu',
             'aria-expanded' => 'false',
         ]); ?>
-        <?php wp_nav_menu(array(
-            'theme_location'    => 'header',
-            'depth'             => 0,
-            'container'         => '',
-            'menu_class'        => '',
-            'menu_id'         => 'main-menu', // don't delete it, needed for 'aria-controls' in burger button.
-            'fallback_cb'       => false,
-        )); ?>
+        <div class="header__navigation-wrap">
+            <?php wp_nav_menu(array(
+                'theme_location'    => 'header',
+                'depth'             => 0,
+                'container'         => '',
+                'menu_class'        => '',
+                'menu_id'         => 'main-menu', // don't delete it, needed for 'aria-controls' in burger button.
+                'fallback_cb'       => false,
+            )); ?>
+        </div>
     </nav>
 <?php endif; ?>
