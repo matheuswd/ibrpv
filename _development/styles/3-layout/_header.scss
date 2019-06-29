@@ -4,10 +4,11 @@
     background: color('dark-blue');
     color: color('white');
     font-weight: 700;
+    transition: background-color 300ms linear;
 
     &__inner {
         display: flex;
-        height: space('layout--large');
+        height: space('layout--large') * 1.5;
         align-items: center;
         justify-content: flex-end;
 
@@ -16,15 +17,26 @@
         }
     }
 
+    &.scrolled {
+        background-color: color('dark-blue'); // for test only
+        transition: background-color 300ms linear;
+    }
+
+    &-wrap {
+        width: 100%;
+        position: fixed;
+        z-index: 5;
+    }
+
     &__logo {
         display: block;
         margin-right: auto;
 
         svg {
-            width: 100px;
+            width: 250px;
 
             @include mq(menu) {
-                width: 130px;
+                width: 300px;
             }
         }
     }
@@ -40,44 +52,6 @@
 
         &:hover {
             text-decoration: none;
-        }
-    }
-
-    &__mobile-cta {
-        margin: 25px space('gutter--desktop');
-        transition: 0.15s ease all;
-        white-space: nowrap;
-
-        @include mq(small) {
-            display: none;
-        }
-
-        .svg-asset {
-            width: auto;
-            margin-right: 3px;
-
-            svg {
-                width: em($base-font-size);
-                height: em($base-font-size);
-            }
-        }
-
-        &:hover {
-            color: rgba(color('white'), 0.8);
-        }
-    }
-
-    &__tablet-cta {
-        margin-right: 25px;
-        white-space: nowrap;
-
-        @include mq($until: small) {
-            display: none;
-        }
-
-        @include mq(menu) {
-            order: 1;
-            margin-right: 0;
         }
     }
 
