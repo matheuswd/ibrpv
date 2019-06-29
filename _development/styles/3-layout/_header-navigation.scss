@@ -21,11 +21,10 @@
         }
     }
 
-
     .header__navigation-wrap {
         position: fixed;
         z-index: 5;
-        top: space('layout--large');
+        top: space('layout--large') * 1.5;
         left: 0;
         display: flex;
         width: 100%;
@@ -187,20 +186,6 @@
 
         > .menu-item-has-children {
             &:hover {
-                &::after {
-                    position: absolute;
-                    bottom: 0;
-                    left: 100%;
-                    display: block;
-                    width: 3px;
-                    height: 3px;
-                    background: transparent;
-                    border-bottom-left-radius: 100%;
-                    box-shadow: 0 0 0 70px color('white');
-                    clip: rect(0, 3px, 3px, 0);
-                    content: '';
-                }
-
                 @include mq(menu) {
                     background-color: color('white');
                     border-bottom-left-radius: 0;
