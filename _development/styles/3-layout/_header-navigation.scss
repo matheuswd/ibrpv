@@ -54,4 +54,67 @@
             }
         }
     }
+
+    .spacer {
+        width: 100%;
+        height: 95px;
+    }
+
+    .burger {
+        @include button-reset;
+        @include burger(30px, 3px, color('white'));
+
+        z-index: 6;
+
+        @include mq(medium) {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            @include burger-hover(30px, 3px, color('white'));
+        }
+
+        &.active {
+            @include burger-active(30px, 3px, color('white'));
+        }
+    }
+    &-wrap {
+        position: fixed;
+        z-index: 5;
+        top: space('gutter--desktop');
+        left: 0;
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        background: color('black');
+        color: color('white');
+        opacity: 0;
+        overflow-y: auto;
+        transition: all ease 0.3s;
+        visibility: hidden;
+
+        @include mq(medium) {
+            position: static;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0;
+            background: transparent;
+            color: inherit;
+            opacity: 1;
+            overflow-y: visible;
+            visibility: visible;
+        }
+
+        .menu-open & {
+            @include mq($until: medium) {
+                height: calc(100% - #{space('gutter--desktop')});
+                opacity: 1;
+                overflow-x: hidden;
+                visibility: visible;
+            }
+        }
+    }
 }
