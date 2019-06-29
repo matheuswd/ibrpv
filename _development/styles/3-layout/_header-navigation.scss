@@ -98,10 +98,11 @@
         a {
             position: relative;
             color: color('white');
-            font-weight: 700;
+            font-weight: 500;
             text-decoration: none;
             transition: 0.15s ease all;
             white-space: nowrap;
+            font-family: $base-font-family;
 
             @include mq(menu) {
                 width: 100%;
