@@ -1,0 +1,61 @@
+.cards-container {
+    @include make-row;
+    margin-top: space('gutter--desktop');
+    display: flex;
+    flex-flow: column wrap;
+    padding: space('gutter');
+
+    .card-small {
+        &:last-child {
+            margin-right: 0px;
+        }
+        width: 100%;
+        margin-right: space('gutter');
+        border-radius: $base-border-radius;
+        position: relative;
+        height: auto;
+        box-shadow: $base-box-shadow;
+        transition: $transition-2;
+        border: 1px solid #dcdcdc;
+
+        &:hover {
+            box-shadow: $hover-box-shadow;
+            transform: $transform-up;
+        }
+
+        &__content {
+            padding: space('gutter') / 2;
+
+            h2 {
+                @include heading('h5');
+                text-transform: uppercase;
+                color: $base-color;
+                font-family: $base-heading-font;
+            }
+
+            p {
+                font-size: rem(13px);
+            }
+
+            ul {
+                @include list-reset-hard;
+
+                li {
+                    font-size: rem(13px);
+                }
+            }
+        }
+        
+        &__thumbnail {
+            // img {
+            //     border-radius: 2px 2px 0 0;
+            // }
+        }
+    }
+}
+
+@include mq(medium) {
+    .cards-container {
+        flex-flow: row nowrap;
+    }
+}
