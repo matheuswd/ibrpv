@@ -18,3 +18,4 @@ require_once 'granola/granola.php';
 // ----------------------------------------------------
 require_once 'functions/image-optimisation.php';
 require_once 'functions/enqueue.php';
+require_once 'functions/menu.php';

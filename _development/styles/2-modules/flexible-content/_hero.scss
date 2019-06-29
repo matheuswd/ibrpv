@@ -1,15 +1,3 @@
-.header {
-    position: fixed;
-    width: 100%;
-    transition: background-color 300ms linear;
-    z-index: 3;
-
-    &.scrolled {
-        background-color: #000 !important; // for test only
-        transition: background-color 300ms linear;
-    }
-}
-
 .hero {
     
     /* Flexbox stuff */
@@ -35,11 +23,8 @@
         text-align: center;
 
         h1 {
-            
-            /* Margins */
             margin-top: 0;
             margin-bottom: 0.5em;
-            /* Text styles */
             font-size: 5em;
         }
 

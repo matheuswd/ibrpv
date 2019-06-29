@@ -26,3 +26,11 @@
     background-color: $background;
     color: $text;
 }
+
+@mixin button--secondary {
+    @include granola-button-color(
+        $text: color('dark-grey'),
+        $background: color('white'),
+        $border: color('white'),
+    );
+}
