@@ -21,7 +21,7 @@
                 'theme_location'    => 'header',
                 'depth'             => 0,
                 'container'         => '',
-                'menu_class'        => '',
+                'menu_class'        => 'main-menu header__menu',
                 'menu_id'         => 'main-menu', // don't delete it, needed for 'aria-controls' in burger button.
                 'fallback_cb'       => false,
             )); ?>
