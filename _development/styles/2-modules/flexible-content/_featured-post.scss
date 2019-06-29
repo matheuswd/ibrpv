@@ -4,9 +4,17 @@
 
     &__thumbnail {
         width: 100%;
+        padding: space('gutter--desktop');
 
         img {
-            padding: space('gutter--desktop');
+            box-shadow: $base-box-shadow;
+            transition: $transition-2;
+            border-radius: $base-border-radius;
+
+            &:hover {
+                box-shadow: $hover-box-shadow;
+                transform: $transform-up;
+            }
         }
     }
 
@@ -14,6 +22,10 @@
         width: 100%;
         padding-right: space('gutter--desktop');
         padding-left: space('gutter--desktop');
+
+        h1 {
+            font-family: $base-heading-font;
+        }
 
         ul {
             @include list-reset-hard;
@@ -34,10 +46,6 @@
             width: 50%;
             padding: space('gutter');
             position: relative;
-
-            h1 {
-                font-family: $base-heading-font;
-            }
 
             a.readmore {
                 position: absolute;
