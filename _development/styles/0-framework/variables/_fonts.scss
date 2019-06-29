@@ -27,14 +27,18 @@ $fonts: (
         'style': bold,
         'ext': ttf
     ),
+    // Noto
+    (
+        'name': 'Noto',
+        'asset': '../assets/fonts/NotoSerif-Bold',
+        'weight': 900,
+        'style': bold,
+        'ext': ttf
+    ),(
+        'name': 'Noto',
+        'asset': '../assets/fonts/NotoSerif-Regular',
+        'weight': 400,
         'style': normal,
         'ext': ttf
     ),
-    // (
-    //     'name': roboto,
-    //     'asset': '/fonts/Roboto-BlackItalic',
-    //     'weight': 900,
-    //     'style': italic,
-    //     'ext': woff2 ttf
-    // ),
 );
