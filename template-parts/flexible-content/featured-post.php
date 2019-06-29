@@ -35,18 +35,23 @@ if ($args = "Post em destaque") {
 }
 
 ?>
-
-
-
 <div class="container">
 <?php
-
-if ( $query->have_posts() ) : ?>
-    <?php while ( $query->have_posts() ) : $query->the_post(); ?>   
-        <div>
-            <h2><?php the_title(); ?></h2>
-            <!-- <?php the_content(); ?> -->
+if ($query->have_posts()) : ?>
+    <?php while ($query->have_posts()) :
+        $query->the_post(); ?>   
+        <div class="featured-post">
+            <div class="featured-post__thumbnail">
+                <?php the_post_thumbnail('full', ['class' => 'img-responsive img-fit']); ?>
+            </div>
+            <div class="featured-post__content">
+                <h1><?php the_title(); ?></h1>
+                <?php the_category(); ?>
+                <p><?php the_date() ?></p>
+                <a href="<?php the_permalink(); ?>" class="readmore"><button>Ver mais</button></a>
+            </div>
         </div>
-    <?php endwhile; wp_reset_postdata(); ?>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
 <?php endif;  ?>
 </div>

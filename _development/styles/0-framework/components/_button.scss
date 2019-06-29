@@ -14,11 +14,11 @@
     text-decoration: none; // [1]
     transition: transition(color, background-color, border-color, box-shadow, transform);
 
-    &:focus {
-        @include no-focus-not-accessible;
+    // &:focus {
+    //     @include no-focus-not-accessible;
 
-        box-shadow: 0 0 0 4px $base-focus-color;
-    }
+    //     box-shadow: 0 0 0 4px $base-focus-color;
+    // }
 }
 
 @mixin granola-button-color($text, $background, $border) {

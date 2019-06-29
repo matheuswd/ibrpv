@@ -9,7 +9,7 @@ $granola-development: false;
 $base-background: color('white');
 $base-color: color('black');
 $base-focus-color: color('blue');
-$base-border-radius: 0;
+$base-border-radius: 2px;
 $base-dark-percentage: 10%;
 
 $container-max-width: 1200px;
@@ -67,3 +67,19 @@ $gf-list-icon-size: 1rem;
 // Fonts
 // ---------------------------------------------------
 $base-heading-font: 'Oswald-Bold', Helvetica, Arial, sans-serif;
+
+// ---------------------------------------------------
+// Shadows
+// ---------------------------------------------------
+$base-box-shadow: 0 1px 3px rgba(31, 33, 34, .042), 0 1px 2px rgba(31, 33, 34, .072);
+$hover-box-shadow: 0 10px 20px rgba(31, 33, 34, .095), 0 6px 6px rgba(31, 33, 34, .115);
+
+// ---------------------------------------------------
+// Transform
+// ---------------------------------------------------
+$transform-up: translateY(-3px);
+
+// ---------------------------------------------------
+// Transition
+// ---------------------------------------------------
+$transition-2: all .2s ease;

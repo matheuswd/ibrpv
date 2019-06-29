@@ -2,9 +2,10 @@
     position: fixed;
     width: 100%;
     transition: background-color 300ms linear;
+    z-index: 3;
 
     &.scrolled {
-        background-color: #fff !important;
+        background-color: #000 !important; // for test only
         transition: background-color 300ms linear;
     }
 }
