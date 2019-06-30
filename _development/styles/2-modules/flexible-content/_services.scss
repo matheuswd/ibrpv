@@ -1,12 +1,25 @@
 .service-time {
-    display: flex;
-    width: 80%;
+    display: grid;
     justify-content: space-around;
-    margin-right: auto;
-    margin-left: auto;
 
     .service-card {
         text-align: center;
-        font-family: $base-heading-font;
+        margin-top: $base-margin;
+        margin-bottom: $base-margin;
+
+        h2 {
+            font-family: $base-heading-font;
+        }
+
+        span {
+            font-family: $base-font-family;
+        } 
+    }
+}
+
+@include mq(medium) {
+    .service-time {
+        display: flex;
+        justify-content: space-around;
     }
 }
