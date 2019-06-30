@@ -42,7 +42,9 @@ if ($query->have_posts()) : ?>
         $query->the_post(); ?>   
         <div class="featured-post">
             <div class="featured-post__thumbnail">
-                <?php the_post_thumbnail('full', ['class' => 'img-responsive img-fit']); ?>
+                <a href="<?php the_permalink() ?>">
+                    <?php the_post_thumbnail('full', ['class' => 'img-responsive img-fit']); ?>
+                </a>
             </div>
             <div class="featured-post__content">
                 <h1><?php the_title(); ?></h1>
