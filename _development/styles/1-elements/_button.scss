@@ -20,3 +20,21 @@ button,
 //         );
 //     }
 // }
+
+.button--white-dark-blue {
+    background-color: color('white');
+    color: color('dark-blue');
+    border-color: color('dark-blue');
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: color('dark-blue');
+        color: color('white');
+        border-color: color('dark-blue');
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
