@@ -1,10 +1,10 @@
 .featured-post {
     @include make-row;
-    margin-top: space('gutter--desktop');
+    margin-top: space('gutter--desktop') * 2;
 
     &__thumbnail {
         width: 100%;
-        padding: space('gutter--desktop');
+        padding: space('gutter') space('gutter') space('gutter');
 
         img {
             box-shadow: $base-box-shadow;
@@ -20,11 +20,12 @@
 
     &__content {
         width: 100%;
-        padding-right: space('gutter--desktop');
-        padding-left: space('gutter--desktop');
+        padding-right: space('gutter');
+        padding-left: space('gutter');
 
         h1 {
-            font-family: $base-heading-font;
+            font-family: $heading-font-family-bold;
+            color: color('dark-blue');
         }
 
         ul {
@@ -33,7 +34,18 @@
             li {
                 display: inline-flex;
                 margin-right: space('gutter');
+                font-family: $base-font-family;
+                font-size: $small-font-size;
+                margin-top: 0px;
             }
+        }
+
+        p {
+            font-size: $small-font-size;
+        }
+
+        .readmore {
+            font-size: $small-font-size;
         }
     }
 
@@ -44,17 +56,22 @@
     
         &__content {
             width: 50%;
-            padding: space('gutter');
+            padding: 0 space('gutter') space('gutter') space('gutter');
             position: relative;
 
-            a.readmore {
+            .readmore {
                 position: absolute;
-                bottom: space('gutter--desktop');
+                bottom: space('gutter');
                 left: space('gutter');
+                font-size: $small-font-size;
+            }
+        }
+    }
 
-                &:hover {
-                    cursor: pointer !important;
-                }
+    @include mq($from: large) {
+        &__content {
+            .readmore {
+                font-size: $base-font-size;
             }
         }
     }
