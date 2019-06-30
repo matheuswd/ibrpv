@@ -22,6 +22,10 @@
             color: color('white');
             text-align: center;
             text-shadow: $base-text-shadow;
+
+            h1 {
+                font-family: $heading-font-family-bold;
+            }
         }
     }
 
