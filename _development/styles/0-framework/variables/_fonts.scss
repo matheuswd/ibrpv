@@ -34,11 +34,19 @@ $fonts: (
         'weight': 900,
         'style': bold,
         'ext': ttf
-    ),(
+    ),
+    (
         'name': 'Noto',
         'asset': '../assets/fonts/NotoSerif-Regular',
         'weight': 400,
         'style': normal,
         'ext': ttf
     ),
+    // (
+    //      'name': 'Gotham Light',
+    //      'asset': '../assets/fonts/GothamLight',
+    //      'weight': 300,
+    //      'style': normal,
+    //      'ext': ttf
+    //  ),
 );
