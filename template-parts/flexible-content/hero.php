@@ -1,7 +1,7 @@
 <?php
 
 $hero_title = ($args['hero_title']) ? $args['hero_title'] : false;
-$hero_image = ($args['hero_image']) ? $args['hero_image'] : false;
+$hero_image = ($args['hero_image']) ? $args['hero_image'] : get_template_directory_uri() . '/assets/images/ibrpv.jpg';
 $hero_intro = ($args['hero_intro']) ? $args['hero_intro'] : false;
 
 if ($hero_image) { ?>
