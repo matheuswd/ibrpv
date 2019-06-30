@@ -50,7 +50,7 @@ if ($query->have_posts()) : ?>
                 <h1><?php the_title(); ?></h1>
                 <?php the_category(); ?>
                 <p><?php the_date() ?></p>
-                <a href="<?php the_permalink(); ?>" class="readmore"><button>Ver mais</button></a>
+                <button class="readmore button--white-dark-blue"><a href="<?php the_permalink(); ?>" >Ver mais</a></button>
             </div>
         </div>
     <?php endwhile;
