@@ -9,7 +9,7 @@ $services_columns = sizeof($services);
 
 ?>
 
-<section class="service-time">
+<section class="container service-time">
     <?php
     foreach ($services as $service) {
         ?>
