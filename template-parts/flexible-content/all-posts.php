@@ -40,32 +40,34 @@ if ($args['show_posts']) {
     
     $query = new WP_Query($query_args);
 ?>
-<div class="container">
-    <div class="cards-container">
-        <?php
-        if ($query->have_posts()) : ?>    
-        <?php while ($query->have_posts()) :
-            $query->the_post(); ?>
-        <div class="card-small">
-            <a href="<?php the_permalink(); ?>">
-                <div class="card-small__thumbnail">
-                <?php if (has_post_thumbnail()) {
-                    the_post_thumbnail('full', ['class' => 'img-responsive img-fit']);
-                } else { ?>
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/no-image.jpg';?>" alt="" class="img-responsive img-fit">
-                <?php } ?>
+<div class="cards-section">
+    <div class="container">
+        <div class="cards-container">
+            <?php
+            if ($query->have_posts()) : ?>    
+            <?php while ($query->have_posts()) :
+                $query->the_post(); ?>
+            <div class="card-small">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="card-small__thumbnail">
+                    <?php if (has_post_thumbnail()) {
+                        the_post_thumbnail('full', ['class' => 'img-responsive img-fit']);
+                    } else { ?>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/no-image.jpg';?>" alt="" class="img-responsive img-fit">
+                    <?php } ?>
+                    </div>
+                </a>
+                <div class="card-small__content">
+                    <h2><a href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 3); ?></a></h2>
+                    <p><?php the_date('d/m/Y'); ?></p>
+                    <?php the_category(); ?>
                 </div>
-            </a>
-            <div class="card-small__content">
-                <h2><a href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 3); ?></a></h2>
-                <p><?php the_date('d/m/Y'); ?></p>
-                <?php the_category(); ?>
+                
             </div>
-            
+            <?php endwhile;
+            wp_reset_postdata();
+            endif;  ?>
         </div>
-        <?php endwhile;
-        wp_reset_postdata();
-        endif;  ?>
     </div>
 </div>
 <?php }

@@ -4,19 +4,17 @@
     display: flex;
     flex-flow: column wrap;
     padding: space('gutter');
+    background-color: color('light-grey');
+    padding-top: space('gutter--desktop') * 1.5;
+    padding-bottom: space('gutter--desktop');
 
     .card-small {
-        &:last-child {
-            margin-right: 0px;
-        }
         width: 100%;
-        margin-right: space('gutter');
-        border-radius: $base-border-radius;
-        position: relative;
         height: auto;
         box-shadow: $base-box-shadow;
         transition: $transition-2;
-        border: 1px solid #dcdcdc;
+        border: 1px solid color('light-grey');
+        margin-bottom: $base-margin;
 
         &:hover {
             box-shadow: $hover-box-shadow;
@@ -25,31 +23,43 @@
 
         &__content {
             padding: space('gutter') / 2;
+            color: color('dark-blue');
 
             h2 {
                 @include heading('h5');
                 text-transform: uppercase;
-                color: $base-color;
                 font-family: $base-heading-font;
             }
 
             p {
-                font-size: rem(13px);
+                font-size: $small-font-size;
             }
 
             ul {
                 @include list-reset-hard;
 
                 li {
-                    font-size: rem(13px);
+                    font-size: $small-font-size;
+
+                    a {
+                        text-decoration: none;
+                    }
                 }
             }
         }
-        
-        &__thumbnail {
-            // img {
-            //     border-radius: 2px 2px 0 0;
-            // }
+    }
+}
+
+@include mq(small) {
+    .cards-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .card-small {
+            width: 48%;
+            &:nth-child(odd) {
+                margin-right: $base-margin;
+            }
         }
     }
 }
@@ -57,5 +67,16 @@
 @include mq(medium) {
     .cards-container {
         flex-flow: row nowrap;
+
+        .card-small {
+            margin-right: $base-margin;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
     }
+}
+
+.cards-section {
+    background-color: color('light-grey');
 }
