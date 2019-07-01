@@ -43,6 +43,22 @@
             "mime_types": ""
         },
         {
+            "key": "field_5d1a9398fcff7",
+            "label": "Link Facebook",
+            "name": "fb_icon_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5d19a6cb4ae03",
             "label": "Ícone do YouTube",
             "name": "youtube_icon",
@@ -67,6 +83,22 @@
             "mime_types": ""
         },
         {
+            "key": "field_5d1a93b8fcff8",
+            "label": "Link YouTube",
+            "name": "youtube_icon_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5d19a6cb4ae02",
             "label": "Ícone do Instagram",
             "name": "instagram_icon",
@@ -89,6 +121,22 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d1a93ccfcff9",
+            "label": "Link Instagram",
+            "name": "instagram_icon_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_5d19a7314ae06",
@@ -143,5 +191,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561962305
+    "modified": 1562022883
 }
