@@ -1,3 +1,42 @@
-// .footer {
+.footer {
+    background-color: color('dark-grey');
+    
+    .container {
+        width: 50%;
+        padding-top: em(40);
+        padding-bottom: em(20);
 
-// }
+        .icons {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+    
+            &__fb,
+            &__instagram,
+            &__youtube {
+                width: 50px;
+            }
+        }
+
+        .message {
+            text-align: center;
+            color: color('white');
+            font-size: $small-font-size;
+        }
+
+        @include mq(small) {
+            width: 35%;
+        }
+
+        @include mq(medium) {
+            width: 25%;
+        }
+
+        @include mq(large) {
+            width: 18%;
+        }
+    }
+}
