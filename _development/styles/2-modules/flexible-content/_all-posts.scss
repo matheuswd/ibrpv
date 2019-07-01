@@ -4,6 +4,9 @@
     display: flex;
     flex-flow: column wrap;
     padding: space('gutter');
+    background-color: color('light-grey');
+    padding-top: space('gutter--desktop') * 1.5;
+    padding-bottom: space('gutter--desktop');
 
     .card-small {
         width: 100%;
@@ -72,4 +75,8 @@
             }
         }
     }
+}
+
+.cards-section {
+    background-color: color('light-grey');
 }
