@@ -72,6 +72,7 @@ $GRANOLA_MENUS = [
 // ----------------------------------------------------
 $GRANOLA_ACF_OPTIONS_PAGES = [
     'Geral',
+    'Rodapé',
 ];
 
 
