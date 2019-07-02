@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <?php if (have_posts()) { ?>
-    <div class="container">
+    <div class="container spacing">
         <main>
             <?php while (have_posts()) {
                 the_post(); ?>
