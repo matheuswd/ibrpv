@@ -19,7 +19,13 @@
                     <a href="' . esc_url(get_permalink()) . '" rel="bookmark">',
                 '</a></h2>'
             );
-        endif; ?>
+        endif;
+        
+        if (has_post_thumbnail()) :
+            the_post_thumbnail('full');
+
+        endif;
+        ?>
     </header>
 
     <div class="entry-content">
