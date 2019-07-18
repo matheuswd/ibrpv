@@ -11,9 +11,9 @@
     .card-small {
         width: 100%;
         height: auto;
-        box-shadow: $base-box-shadow;
+        // box-shadow: $base-box-shadow;
         transition: $transition-2;
-        border: 1px solid color('light-grey');
+        border: 1px solid #cdcdcd;
         margin-bottom: $base-margin;
 
         &:hover {
