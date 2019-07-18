@@ -22,16 +22,17 @@ button,
 // }
 
 .button--white-dark-blue {
-    background-color: color('white');
-    color: color('dark-blue');
-    border-color: color('dark-blue');
+    background-color: color('dark-blue');
+    color: color('white');
+    border-color: color('white');
+    border-radius: $base-border-radius + 1;
 
     &:hover,
     &:active,
     &:focus {
-        background-color: color('dark-blue');
-        color: color('white');
-        border-color: color('dark-blue');
+        background-color: color('white');
+        color: color('dark-blue');
+        border-color: color('white');
     }
 
     a {
