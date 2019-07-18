@@ -20,6 +20,33 @@
             "ui": 1,
             "ui_on_text": "Sim",
             "ui_off_text": "Não"
+        },
+        {
+            "key": "field_5d30a3fa94d4f",
+            "label": "Subtítulo",
+            "name": "subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d149bcf1f4ca",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -39,5 +66,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561631753
+    "modified": 1563468828
 }
