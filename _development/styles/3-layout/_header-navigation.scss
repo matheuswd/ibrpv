@@ -96,10 +96,8 @@
         // ----------------------------------------------
         a {
             position: relative;
-            color: color('white');
             font-weight: 500;
             text-decoration: none;
-            transition: 0.15s ease all;
             white-space: nowrap;
             font-family: $base-font-family;
 
@@ -165,7 +163,7 @@
             }
 
             @include mq(menu) {
-                padding: space('vertical--small') space('gutter--desktop');
+                padding: 6px space('gutter--desktop');
                 margin-left: -#{space('gutter')};
                 border-radius: $small-border-radius;
 

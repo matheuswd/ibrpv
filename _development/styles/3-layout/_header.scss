@@ -1,7 +1,7 @@
 .header {
     position: relative;
     z-index: 3;
-    background: color('dark-blue');
+    background: transparent;
     color: color('white');
     font-weight: 700;
     transition: background-color 300ms linear;
@@ -18,8 +18,13 @@
     }
 
     &.scrolled {
-        background-color: color('dark-blue'); // for test only
+        background-color: color('light-grey'); // for test only
         transition: background-color 300ms linear;
+        color: color('dark-blue');
+
+        .current-menu-item {
+            border-bottom: 2px solid color('dark-blue');
+        }
     }
 
     &-wrap {
@@ -34,6 +39,10 @@
 
         svg {
             width: 250px;
+
+            &:last-child {
+                display: none;
+            }
 
             @include mq(menu) {
                 width: 300px;
@@ -90,14 +99,14 @@
         // ----------------------------------------------
         a {
             position: relative;
-            color: color('white');
+            color: color('dark-blue');
             font-weight: 700;
             text-decoration: none;
             transition: 0.15s ease all;
             white-space: nowrap;
 
             &:hover {
-                color: rgba(color('white'), 0.8);
+                color: rgba(color('dark-blue'), 0.8);
                 text-decoration: none;
             }
         }
