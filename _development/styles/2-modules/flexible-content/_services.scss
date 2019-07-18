@@ -4,15 +4,35 @@
     color: color('light-grey');
 
     .service-card {
-        text-align: center;
-        margin-top: $base-margin;
-
-        h2 {
-            font-family: $base-heading-font;
+        &:last-child {
+            display: flex;
         }
 
-        span {
-            font-family: $base-font-family;
+        &__line {
+            text-align: center;
+            margin-top: $base-margin;
+            display: flex;
+            align-items: center;
+
+            &:last-child{
+                margin-top: 0;
+            }
+
+            .icon {
+                width: 30px;
+                margin-right: 10px;
+            }
+
+            > .line__description {
+                font-family: 'Lato-RegularItalic';
+                margin-top: 0;
+            }
+
+            > .line__church-name,
+            .line__church-address {
+                font-family: 'Lato-RegularItalic';
+                font-size: 15px;
+            }
         } 
     }
 }
