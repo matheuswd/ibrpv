@@ -1,50 +1,109 @@
-.service-time {
-    display: grid;
-    justify-content: space-around;
-    color: color('light-grey');
+.church-info {
+    background-color: color('dark-blue');
+    color: color('white');
 
-    .service-card {
-        &:last-child {
-            display: flex;
+    .container {
+        @include mq(large) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+    .column {
+        @include make-column();
+        text-align: center;
+
+        @include mq(large) {
+            text-align: left;
+        }
+    }
+
+    .icon {
+        width: 70px;
+
+        @include mq(large) {
+            width: 25px;
+            margin-right: space('gutter');
+        }
+    }
+
+    .visiting {
+        @include mq(large) {
+            margin-bottom: space('gutter');
         }
 
-        &__line {
-            text-align: center;
-            margin-top: $base-margin;
-            display: flex;
+        hr {
+            width: 40%;
+            color: color('light-grey');
+            
+            @include mq(large) {
+                display: none;
+            }
+        }
+
+        #calendar {
+            display: none;
+
+            @include mq(large) {
+                display: inline;
+            }
+        }
+
+        &__title {
+            font-family: $base-font-family;
+            font-size: $large-font-size;
+            margin-top: 0;
+            margin-bottom: space('gutter') / 2;
+            padding-top: space('gutter--desktop');
+        }
+
+        &__time {
+            margin-top: 0;
+            font-family: $base-italic-font-family;
+        }
+    }
+
+    .address {
+        padding-bottom: space('gutter--desktop');
+
+        @include mq(large) {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-gap: space('gutter--desktop');
             align-items: center;
+            padding-top: space('gutter--desktop');
+        }
 
-            &:last-child{
+        &__title,
+        &__street-address {
+            font-family: $base-italic-font-family;
+            font-size: $base-font-size;
+
+            @include mq(large) {
                 margin-top: 0;
+                margin-bottom: 0;
             }
+        }
 
-            .icon {
-                width: 30px;
-                margin-right: 10px;
-            }
+        button {
+            padding: 5px 20px;
+        }
 
-            > .line__description {
-                font-family: 'Lato-RegularItalic';
-                margin-top: 0;
-            }
+        #location-arrow,
+        #maps-and-flags-large {
+            display: none;
 
-            > .line__church-name,
-            .line__church-address {
-                font-family: 'Lato-RegularItalic';
-                font-size: 15px;
+            @include mq(large) {
+                width: 15px;
+                margin-right: space('gutter') / 2;
+                display: inline;
             }
-        } 
+        }
+
+        #maps-and-flags {
+            @include mq($from: large) {
+                display: none;
+            }
+        }
     }
-}
-
-@include mq(medium) {
-    .service-time {
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
-.services-section {
-    background-color: color('dark-blue');
-    padding-bottom: $base-margin;
 }
