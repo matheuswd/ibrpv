@@ -1,6 +1,7 @@
 .service-time {
     display: grid;
     justify-content: space-around;
+    color: color('light-grey');
 
     .service-card {
         text-align: center;
@@ -24,6 +25,6 @@
 }
 
 .services-section {
-    background-color: color('light-grey');
+    background-color: color('dark-blue');
     padding-bottom: $base-margin;
 }
