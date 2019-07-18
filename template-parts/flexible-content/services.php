@@ -35,7 +35,7 @@ $link_google_maps = $args['link_google_maps'];
             </div>
             <div class="service-card">
                 <div class="service-card__line">
-                    <button class="button--white-dark-blue"><?php esc_html_e('Google Maps', 'ibrpv'); ?></button>
+                    <button class="button--white-dark-blue"><a href="<?php echo esc_html($link_google_maps) ?>"><?php esc_html_e('Google Maps', 'ibrpv'); ?></a></button>
                 </div>
             </div>
     </section>
