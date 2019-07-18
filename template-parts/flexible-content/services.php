@@ -9,16 +9,18 @@ $services_columns = sizeof($services);
 
 ?>
 
-<section class="container service-time">
-    <?php
-    foreach ($services as $service) {
-        ?>
-        <div class="service-card">
-            <h2 class="service-card__time"><?php echo esc_attr($service['service_time']) ?></h2>
-            <span class="service_card__day"><?php echo esc_attr($service['service_day']) ?></span> | 
-            <span class="service_card__type"><?php echo esc_attr($service['service_type']) ?></span>
-        </div>
+<div class="services-section">
+    <section class="container service-time">
         <?php
-    }
-    ?>
-</section>
+        foreach ($services as $service) {
+            ?>
+            <div class="service-card">
+                <h2 class="service-card__time"><?php echo esc_attr($service['service_time']) ?></h2>
+                <span class="service_card__day"><?php echo esc_attr($service['service_day']) ?></span> | 
+                <span class="service_card__type"><?php echo esc_attr($service['service_type']) ?></span>
+            </div>
+            <?php
+        }
+        ?>
+    </section>
+</div>

@@ -1,52 +1,23 @@
 $fonts: (
     (
-        'name': 'Oswald',
-        'asset': '../assets/fonts/Oswald-Light',
+        'name': 'Lato',
+        'asset': '../assets/fonts/Lato-Light',
         'weight': 300,
         'style': normal,
         'ext': ttf
     ),
     (
-        'name': 'Oswald',
-        'asset': '../assets/fonts/Oswald-Regular',
+        'name': 'Lato',
+        'asset': '../assets/fonts/Lato-Regular',
         'weight': 500,
         'style': normal,
         'ext': ttf
     ),
     (
-        'name': 'Oswald',
-        'asset': '../assets/fonts/Oswald-Medium',
-        'weight': 700,
+        'name': 'Lato',
+        'asset': '../assets/fonts/Lato-Black',
+        'weight': 900,
         'style': normal,
         'ext': ttf
     ),
-    (
-        'name': 'Oswald',
-        'asset': '../assets/fonts/Oswald-Bold',
-        'weight': 900,
-        'style': bold,
-        'ext': ttf
-    ),
-    // Noto
-    (
-        'name': 'Noto',
-        'asset': '../assets/fonts/NotoSerif-Bold',
-        'weight': 900,
-        'style': bold,
-        'ext': ttf
-    ),
-    (
-        'name': 'Noto',
-        'asset': '../assets/fonts/NotoSerif-Regular',
-        'weight': 400,
-        'style': normal,
-        'ext': ttf
-    ),
-    // (
-    //      'name': 'Gotham Light',
-    //      'asset': '../assets/fonts/GothamLight',
-    //      'weight': 300,
-    //      'style': normal,
-    //      'ext': ttf
-    //  ),
 );
