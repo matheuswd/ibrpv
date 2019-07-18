@@ -1,48 +1,56 @@
 .featured-post {
     @include make-row;
-    margin-top: space('gutter--desktop') * 2;
+    margin-top: space('gutter--desktop');
 
     &__thumbnail {
         width: 100%;
         padding: space('gutter') space('gutter') space('gutter');
 
+        @include mq($until: medium) {
+            width: 100%;
+            padding: space('gutter') space('gutter') space('gutter');
+            width: 100vw;
+            position: relative;
+            margin-left: -50vw;
+            left: 50%;
+            padding: 0;
+        }
+
         img {
             box-shadow: $base-box-shadow;
-            transition: $transition-2;
-            border-radius: $base-border-radius;
-
-            &:hover {
-                box-shadow: $hover-box-shadow;
-                transform: $transform-up;
-            }
         }
     }
 
     &__content {
         width: 100%;
-        padding-right: space('gutter');
-        padding-left: space('gutter');
-        text-transform: uppercase;
+        padding-right: space('gutter') * 1.5;
+        padding-left: space('gutter') * 1.5;
+        text-transform: capitalize;
 
         h1 {
             font-family: $heading-font-family-bold;
             color: color('dark-blue');
         }
 
-        ul {
-            @include list-reset-hard;
-
-            li {
-                display: inline-flex;
-                margin-right: space('gutter');
-                font-family: $base-font-family;
-                font-size: $small-font-size;
-                margin-top: 0px;
-            }
-        }
-
         p {
-            font-size: $small-font-size;
+            color: color('red');
+            font-size: $tiny-font-size;
+
+            a {
+                text-decoration: none;
+                color: color('red');
+                text-transform: uppercase;
+                font-family: $base-light-font-family;
+                font-size: $small-font-size;
+            }
+
+            &.subtitle {
+                color: color('dark-blue');
+                font-size: $base-font-size;
+                text-transform: none;
+                line-height: space('gutter--desktop');
+                margin-top: space('gutter') / 3;
+            }
         }
 
         .readmore {
@@ -52,27 +60,28 @@
 
     @include mq(medium) {
         &__thumbnail {
-            width: 50%;
+            width: 60%;
         }
     
         &__content {
-            width: 50%;
-            padding: 0 space('gutter') space('gutter') space('gutter');
+            width: 40%;
+            padding: 0 space('gutter') space('gutter') (space('gutter--desktop') * 3);
             position: relative;
+            display: grid;
+            align-content: center;
 
-            .readmore {
-                position: absolute;
-                bottom: space('gutter');
-                left: space('gutter');
-                font-size: $small-font-size;
-            }
-        }
-    }
-
-    @include mq($from: large) {
-        &__content {
-            .readmore {
-                font-size: $base-font-size;
+            p {
+                a {
+                    font-family: $base-light-font-family;
+                    font-size: $small-font-size;
+                }
+    
+                &.subtitle {
+                    font-size: $large-font-size;
+                    line-height: space('gutter--desktop') * 1.2;
+                    margin-top: space('gutter') / 3;
+                    font-family: $heading-font-family-bold-a;
+                }
             }
         }
     }

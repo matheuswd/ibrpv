@@ -47,10 +47,11 @@ if ($query->have_posts()) : ?>
                 </a>
             </div>
             <div class="featured-post__content">
+                <p><?php the_category(' • '); ?></p>
                 <h1><?php the_title(); ?></h1>
-                <?php the_category(); ?>
-                <p><?php the_date() ?></p>
-                <button class="readmore button--white-dark-blue"><a href="<?php the_permalink(); ?>" >Ver mais</a></button>
+                <p class="subtitle">
+                    <?php echo get_post_meta( get_the_ID() , 'subtitle', true) ?>
+                </p>
             </div>
         </div>
     <?php endwhile;
