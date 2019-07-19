@@ -7,6 +7,10 @@
     background-color: color('light-grey');
     padding-bottom: space('gutter--desktop');
 
+    @include mq(large) {
+        margin-top: space('gutter--desktop');
+    }
+
     .card-small {
         width: 100%;
         height: auto;
@@ -15,6 +19,14 @@
         grid-template-columns: 70% 30%;
         align-items: center;
         border-bottom: 1px solid #cecece;
+        padding-bottom: space('gutter');
+
+        @include mq(medium) {
+            display: flex;
+            flex-flow: column-reverse;
+            padding-bottom: 0;
+            border: none;
+        }
 
         &__thumbnail {
             width: 100%;
@@ -23,6 +35,11 @@
         &__content {
             padding: space('gutter') / 2;
             color: color('grey');
+
+            @include mq(medium) {
+                width: 100%;
+                padding-left: 0;
+            }
 
             h2 {
                 @include heading('h5');
@@ -63,6 +80,7 @@
 @include mq(medium) {
     .cards-container {
         flex-flow: row nowrap;
+        align-items: baseline;
 
         .card-small {
             margin-right: $base-margin;
@@ -88,6 +106,7 @@
     @include mq(medium) {
         text-align: center;
         font-size: $large-font-size;
+        padding-top: space('gutter--desktop') * 2;
     }
 
     span {
