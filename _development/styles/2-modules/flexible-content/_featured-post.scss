@@ -1,6 +1,5 @@
 .featured-post {
     @include make-row;
-    margin-top: space('gutter--desktop');
 
     &__thumbnail {
         width: 100%;
@@ -59,6 +58,10 @@
     }
 
     @include mq(medium) {
+        padding-bottom: space('gutter--desktop') * 1.5;
+        margin-top: space('gutter--desktop');
+
+
         &__thumbnail {
             width: 60%;
         }

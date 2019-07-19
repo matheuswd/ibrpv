@@ -34,7 +34,7 @@ if ($args['show_posts']) {
     $query_args = array(
         'post_type' => 'post',
         'order' => 'DESC',
-        'posts_per_page' => 4,
+        'posts_per_page' => 3,
         'post__not_in' => $ignored_posts,
     );
     
@@ -42,12 +42,18 @@ if ($args['show_posts']) {
 ?>
 <div class="cards-section">
     <div class="container">
+    <h2 class="latest-posts"><?php esc_html_e('Últimas', 'ibrpv'); ?><span><?php esc_html_e('Postagens', 'ibrpv'); ?></span></h2>
         <div class="cards-container">
             <?php
             if ($query->have_posts()) : ?>    
             <?php while ($query->have_posts()) :
                 $query->the_post(); ?>
             <div class="card-small">
+                <div class="card-small__content">
+                    <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                    <p><?php echo get_the_date('d/m/Y'); ?> | <span><?php the_category(' • '); ?></span> </p>
+                    
+                </div>
                 <a href="<?php the_permalink(); ?>">
                     <div class="card-small__thumbnail">
                     <?php if (has_post_thumbnail()) {
@@ -57,12 +63,6 @@ if ($args['show_posts']) {
                     <?php } ?>
                     </div>
                 </a>
-                <div class="card-small__content">
-                    <h2><a href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 3); ?></a></h2>
-                    <p><?php the_date('d/m/Y'); ?></p>
-                    <?php the_category(); ?>
-                </div>
-                
             </div>
             <?php endwhile;
             wp_reset_postdata();
