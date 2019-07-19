@@ -45,6 +45,10 @@
                 @include heading('h5');
                 text-transform: capitalize;
                 font-family: $base-heading-font;
+
+                @include mq(large) {
+                    font-size: $base-font-size;
+                }
             }
 
             p {
