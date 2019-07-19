@@ -59,6 +59,7 @@
     }
 
     @include mq(medium) {
+        padding-bottom: space('gutter--desktop') * 1.5;
         &__thumbnail {
             width: 60%;
         }
