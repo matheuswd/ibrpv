@@ -1,42 +1,59 @@
 .footer {
-    background-color: color('dark-grey');
+    background-color: color('light-grey');
     
     .container {
-        width: 50%;
+        width: 90%;
         padding-top: em(40);
         padding-bottom: em(20);
+        text-align: center;
+
+        .follow-us {
+            color: color('red');
+            text-transform: uppercase;
+            font-family: $base-font-family;
+            font-weight: $base-bold-font-weight;
+            font-size: $large-font-size;
+        }
 
         .icons {
+
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            align-content: center;
-    
+            align-content: space-around;
+            margin-top: space('gutter');
+
             &__fb,
             &__instagram,
             &__youtube {
-                width: 50px;
+                width: 40px;
+                margin-left: 10px;
+                margin-right: 10px;
             }
+
         }
 
         .message {
             text-align: center;
             color: color('white');
             font-size: $small-font-size;
-        }
 
-        @include mq(small) {
-            width: 35%;
-        }
+            img {
+                width: 100px;
+            }
+            
+            p {
+                color: color('grey');
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+            }
 
-        @include mq(medium) {
-            width: 25%;
-        }
-
-        @include mq(large) {
-            width: 18%;
+            .footer-message {
+                font-size: $base-font-size * 1.2;
+                font-family: $base-italic-font-family;
+            }
         }
     }
 }
