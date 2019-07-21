@@ -3,6 +3,100 @@
     "title": "Opções - Rodapé",
     "fields": [
         {
+            "key": "field_5d19a7314ae06",
+            "label": "Mensagem de rodapé",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d31d540c7eca",
+            "label": "Logo (sem texto)",
+            "name": "no_text_logo",
+            "type": "image",
+            "instructions": "Envie o logo sem texto",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d19a7134ae05",
+            "label": "Mensagem de rodapé",
+            "name": "footer_message",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d31d582c7ecb",
+            "label": "Texto para \"conhecer mais sobre a igreja\"",
+            "name": "learn_more",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d31d5a6c7ecc",
+            "label": "URL para \"conhecer mais sobre a igreja\"",
+            "name": "learn_more_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5d19a6ff4ae04",
             "label": "Ícones",
             "name": "",
@@ -137,41 +231,6 @@
             },
             "default_value": "",
             "placeholder": ""
-        },
-        {
-            "key": "field_5d19a7314ae06",
-            "label": "Mensagem de rodapé",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5d19a7134ae05",
-            "label": "Mensagem de rodapé",
-            "name": "footer_message",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -191,5 +250,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562022883
+    "modified": 1563547133
 }

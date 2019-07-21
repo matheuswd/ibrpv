@@ -8,7 +8,7 @@
 
     &__inner {
         display: flex;
-        height: space('layout--large') * 1.5;
+        height: space('layout--large');
         align-items: center;
         justify-content: flex-end;
 
@@ -24,6 +24,10 @@
 
         .current-menu-item {
             border-bottom: 2px solid color('dark-blue');
+        }
+
+        .burger__line {
+            background-color: color('dark-blue');
         }
     }
 
