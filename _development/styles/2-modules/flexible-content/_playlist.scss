@@ -1,0 +1,7 @@
+.video-section {
+    margin-bottom: space('gutter--desktop');
+
+    @include mq(large) {
+        margin-bottom: space('gutter--desktop') * 2.5;
+    }
+}
