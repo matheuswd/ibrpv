@@ -1,5 +1,6 @@
 .footer {
     background-color: color('light-grey');
+    box-shadow: $top-shadow;
     
     .container {
         width: 90%;
@@ -53,6 +54,34 @@
             .footer-message {
                 font-size: $base-font-size * 1.2;
                 font-family: $base-italic-font-family;
+            }
+        }
+
+        @include mq(medium) {
+            display: grid;
+            grid-template-columns: 80% 20%;
+
+            .follow-us {
+                font-size: $small-font-size;
+            }
+
+            .message {
+                display: grid;
+                grid-template-columns: 15% 85%;
+
+                .footer-message {
+                    text-align: left;
+                    width: 70%;
+                    margin-bottom: 0;
+                    font-size: $base-font-size;
+                }
+
+                p {
+                    text-align: left;
+                    margin-top: 0;
+                    padding-top: 0;
+                    font-size: $base-font-size - 5;
+                }
             }
         }
     }
