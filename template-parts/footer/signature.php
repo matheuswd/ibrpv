@@ -23,33 +23,37 @@ $learn_more_url = get_field('learn_more_url', 'option');
 <?php if ($footer_message) : ?>
     <section class="message">
         <img src="<?php echo esc_html($logo); ?>" alt="">
+        <div>
         <p class="footer-message"><?php echo esc_attr($footer_message); ?></p>
         <p><a href="<?php echo esc_attr($learn_more_url); ?>"><?php echo esc_attr($learn_more); ?></a></p>
+        </div>
     </section>
 <?php endif; ?>
 <div>
-    <span class="follow-us"><?php esc_html_e('Siga-nos', 'IBRPV'); ?></span>
+    <div>
+        <span class="follow-us"><?php esc_html_e('Siga-nos', 'IBRPV'); ?></span>
+    </div>
+    <section class="icons">
+        <?php if ($fb_icon && $fb_icon_link ) : ?>
+            <div class="icons__fb">
+                <a href="<?php echo esc_attr($fb_icon_link); ?>">
+                    <img src="<?php echo $fb_icon['url']; ?>" alt="<?php echo $fb_icon['alt'] ?>">
+                </a>
+            </div>
+        <?php endif; ?>
+        <?php if ($youtube_icon && $youtube_icon_link) : ?>
+            <div class="icons__youtube">
+                <a href="<?php echo esc_attr($youtube_icon_link); ?>">
+                    <img src="<?php echo $youtube_icon['url']; ?>" alt="<?php echo $youtube_icon['alt'] ?>">
+                </a>
+            </div>
+        <?php endif; ?>
+        <?php if ($instagram_icon && $instagram_icon_link) : ?>
+            <div class="icons__instagram">
+                <a href="<?php echo esc_attr($instagram_icon_link); ?>">
+                    <img src="<?php echo $instagram_icon['url']; ?>" alt="<?php echo $instagram_icon['alt'] ?>">
+                </a>
+            </div>
+        <?php endif; ?>
+    </section>
 </div>
-<section class="icons">
-    <?php if ($fb_icon && $fb_icon_link ) : ?>
-        <div class="icons__fb">
-            <a href="<?php echo esc_attr($fb_icon_link); ?>">
-                <img src="<?php echo $fb_icon['url']; ?>" alt="<?php echo $fb_icon['alt'] ?>">
-            </a>
-        </div>
-    <?php endif; ?>
-    <?php if ($youtube_icon && $youtube_icon_link) : ?>
-        <div class="icons__youtube">
-            <a href="<?php echo esc_attr($youtube_icon_link); ?>">
-                <img src="<?php echo $youtube_icon['url']; ?>" alt="<?php echo $youtube_icon['alt'] ?>">
-            </a>
-        </div>
-    <?php endif; ?>
-    <?php if ($instagram_icon && $instagram_icon_link) : ?>
-        <div class="icons__instagram">
-            <a href="<?php echo esc_attr($instagram_icon_link); ?>">
-                <img src="<?php echo $instagram_icon['url']; ?>" alt="<?php echo $instagram_icon['alt'] ?>">
-            </a>
-        </div>
-    <?php endif; ?>
-</section>
