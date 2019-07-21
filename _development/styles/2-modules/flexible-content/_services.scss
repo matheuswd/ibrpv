@@ -49,6 +49,16 @@
             }
         }
 
+        #calendar-large {
+            width: 40px;
+            margin-bottom: space('gutter');
+            margin-top: sapce('gutter');
+
+            @include mq(large) {
+                display: none;
+            }
+        }
+
         &__title {
             font-family: $base-font-family;
             font-size: $large-font-size;

@@ -16,6 +16,7 @@ $link_google_maps = $args['link_google_maps'];
     <div class="container">
         <div class="column visiting">
             <p class="visiting__title"><img src="<?php echo get_template_directory_uri() . '/assets/images/calendar.png' ?>" class="icon" id="calendar" alt=""><?php echo esc_html($title_1); ?></p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/calendar.png' ?>" class="icon" id="calendar-large" alt="">
             <p class="visiting__time"><?php echo esc_html($description); ?></p>
             <hr>
         </div>

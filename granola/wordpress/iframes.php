@@ -11,7 +11,7 @@ function granola_wrap_iframes($html, $url, $attr)
     // The url parameter provided is the url pasted in to the wysiwyg
     // Therefore, to get the oembed url, we need to pass the iframe and extract it
     $doc = new DOMDocument();
-    $doc->loadHTML($html);
+    @$doc->loadHTML($html);
     $iframe = $doc->getElementsByTagName('iframe')->item(0);
 
     // Lets check if the first index is not null

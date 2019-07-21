@@ -182,7 +182,7 @@
                         },
                         {
                             "key": "field_5d2fe6d720e87",
-                            "label": "Nome da igreja",
+                            "label": "Nome da Igreja",
                             "name": "church_name",
                             "type": "text",
                             "instructions": "",
@@ -300,6 +300,73 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d33bf1f11f22": {
+                    "key": "layout_5d33bf1f11f22",
+                    "name": "playlist",
+                    "label": "Playlists e vídeo do YouTube",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d33bf3811f24",
+                            "label": "URL",
+                            "name": "playlist_url",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 1
+                        },
+                        {
+                            "key": "field_5d33c06ab6b7e",
+                            "label": "Texto cinza",
+                            "name": "playlist_grey_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d33c079b6b7f",
+                            "label": "Texto vermelho",
+                            "name": "playlist_red_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -326,5 +393,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1563420756
+    "modified": 1563672713
 }
