@@ -14,6 +14,7 @@ function granola_image($name, $args = [])
         'name'   => $name,
         'alt'    => '',
         'class'  => '',
+        'id'     => '',
     ]);
 
     if ($image_url = granola_get_image_url($args['name'])) {
@@ -28,6 +29,10 @@ function granola_image($name, $args = [])
 
         if ($args['class'] !== "") {
             $attributes['class'] = esc_attr($args['class']);
+        }
+
+        if ($args['id'] !== "") {
+            $attributes['id'] = esc_attr($args['id']);
         }
 
         $attributes_string = '';
