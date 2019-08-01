@@ -1,0 +1,23 @@
+.blog-categories {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    @include mq(medium) {
+        flex-direction: row;
+
+        li {
+            @include no-last-margin;
+            margin-right: space('gutter');
+        }
+    }
+
+    li {
+        list-style-type: none;
+        color: color('red');
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

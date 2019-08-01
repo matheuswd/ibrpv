@@ -83,11 +83,15 @@
 
 @include mq(medium) {
     .cards-container {
-        flex-flow: row nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow:row wrap;
         align-items: baseline;
 
         .card-small {
             margin-right: $base-margin;
+            box-sizing: border-box;
+            flex: 1 1 30%;
             &:last-child {
                 margin-right: 0px;
             }
