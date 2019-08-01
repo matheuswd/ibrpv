@@ -11,21 +11,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <?php
-        if (is_single()) :
+        if (is_single() || is_category()) :
             the_title('<h1 class="entry-title">', '</h1>');
-        else :
-            the_title(
-                '<h2 class="entry-title">
-                    <a href="' . esc_url(get_permalink()) . '" rel="bookmark">',
-                '</a></h2>'
-            );
+            the_content();
         endif;
         ?>
     </header>
-
-    <div class="entry-content">
-       <?php // removes content from blog page ?>
-    </div>
 
     <footer class="entry-footer">
 
