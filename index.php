@@ -16,15 +16,30 @@ if(!empty(get_option('page_for_posts'))) {
 </section>
 
 <?php if (have_posts()) { ?>
-    <div class="container spacing">
-        <main>
-            <?php while (have_posts()) {
-                the_post();
-                echo granola_render('template-parts/post/content');
-            } ?>
-        </main>
-        <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
-    </div>
+<div class="container">
+<?php if(is_blog()) {
+            echo granola_render('template-parts/post/categories');
+        } ?>
+</div>
+    <?php
+    if(is_blog()) :
+            echo granola_render('template-parts/flexible-content/featured-post');
+            echo granola_render('template-parts/flexible-content/all-posts', array('show_posts' => true, 'number_of_posts' => 6));
+
+    ?>
+    <?php else : ?>
+        <div class="container spacing">
+            <main>
+                <?php while (have_posts()) {
+                    the_post();
+                    echo granola_render('template-parts/post/content');
+                } 
+                ?>
+            </main>
+            <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
+        </div>
+    <?php endif; ?>
+    
 <?php } else { ?>
     <main class="container">
         <?php echo granola_render('template-parts/content-none'); ?>
