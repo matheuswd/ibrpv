@@ -24,20 +24,38 @@ if(!empty(get_option('page_for_posts'))) {
     <?php
     if(is_blog()) :
             echo granola_render('template-parts/flexible-content/featured-post');
-            echo granola_render('template-parts/flexible-content/all-posts', array('show_posts' => true, 'number_of_posts' => 6));
+            
 
     ?>
-    <?php else : ?>
+    
         <div class="container spacing">
             <main>
                 <?php while (have_posts()) {
                     the_post();
-                    echo granola_render('template-parts/post/content');
+                    ?>
+            <div class="card-small">
+                <div class="card-small__content">
+                    <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                    <p><?php echo get_the_date('d/m/Y'); ?> | <span><?php the_category(' • '); ?></span> </p>
+                    
+                </div>
+                <a href="<?php the_permalink(); ?>">
+                    <div class="card-small__thumbnail">
+                    <?php if (has_post_thumbnail()) {
+                        the_post_thumbnail('full', ['class' => 'img-responsive img-fit']);
+                    } else { ?>
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/no-image.jpg';?>" alt="" class="img-responsive img-fit">
+                    <?php } ?>
+                    </div>
+                </a>
+            </div>
+                    <?
                 } 
                 ?>
             </main>
             <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
         </div>
+        <?php else : ?>
     <?php endif; ?>
     
 <?php } else { ?>
