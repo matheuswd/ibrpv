@@ -1,6 +1,6 @@
 .footer {
     background-color: color('light-grey');
-    box-shadow: $top-shadow;
+    box-shadow: $base-box-shadow;
     
     .container {
         width: 90%;
@@ -8,16 +8,54 @@
         padding-bottom: em(20);
         text-align: center;
 
-        .follow-us {
+        .follow-us__title,
+        .visit-us__title {
             color: color('red');
             text-transform: uppercase;
             font-family: $base-font-family;
             font-weight: $base-bold-font-weight;
-            font-size: $large-font-size;
+            font-size: $small-font-size;
+        }
+
+        .visit-us {
+            &__info button {
+                line-height: 25px;
+                padding: 5px 15px;
+                margin-top: 10px;
+                a {
+                    font-size: $small-font-size;
+                }
+            }
+            p {
+                color: color('grey');
+                font-size: $small-font-size * 1.2;
+                font-family: $base-font-family;
+            }
+
+            &__message {
+                margin-bottom: 0;
+                margin-top: 10px;
+
+                &:last-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .follow-us {
+            p {
+                color: color('grey');
+                font-family: $base-italic-font-family;
+                font-size: $small-font-size * 1.2;
+            }
+
+            &__message {
+                margin-bottom: 0;
+                margin-top: 10px;
+            }
         }
 
         .icons {
-
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -40,40 +78,92 @@
             text-align: center;
             color: color('white');
             font-size: $small-font-size;
-
-            img {
-                width: 100px;
-            }
+            border: none;
             
             p {
                 color: color('grey');
                 font-family: $base-font-family;
-                font-size: $base-font-size;
+                font-size: $small-font-size;
             }
 
             .footer-message {
-                font-size: $base-font-size * 1.2;
+                font-size: $small-font-size * 1.2;
                 font-family: $base-italic-font-family;
             }
         }
 
         @include mq(medium) {
             display: grid;
-            grid-template-columns: 80% 20%;
+            grid-template-columns: 34% 33% 33%;
 
-            .follow-us {
+            .follow-us__title,
+            .visit-us__title {
                 font-size: $small-font-size;
             }
 
+            .visit-us {
+                text-align: left;
+                border-right: 1px solid #dddddd;
+                padding-left: 10%;
+                padding-right: 10%;
+
+                &__info button {
+                    margin-top: space('gutter') / 2;
+                }
+
+                @include mq(large) {
+                    padding-left: 20%;
+                    padding-right: 20%;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    font-size: $small-font-size;
+                }
+
+                p:last-child {
+                    margin-top: 0;
+                }
+            }
+
+            .icons {
+                justify-content: start;
+                margin-top: 10px;
+
+                &__fb {
+                    margin-left: 0;
+                }
+            }
+
+            .follow-us {
+                text-align: left;
+                padding-left: 10%;
+                padding-right: 10%;
+
+                @include mq(large) {
+                    padding-left: 20%;
+                    padding-right: 20%;
+                }
+
+                p {
+                    font-size: $small-font-size;
+                    margin-top: 5px;
+                }
+            }
             .message {
-                display: grid;
-                grid-template-columns: 15% 85%;
+                text-align: left;
+                border-right: 1px solid #dddddd;
+
+                img {
+                    width: 60%;
+                }
 
                 .footer-message {
                     text-align: left;
-                    width: 70%;
+                    width: 90%;
                     margin-bottom: 0;
-                    font-size: $base-font-size;
+                    font-size: $small-font-size;
                 }
 
                 p {
