@@ -92,6 +92,7 @@
             margin-right: $base-margin;
             box-sizing: border-box;
             flex: 1 1 30%;
+            max-width: 32%;
             &:last-child {
                 margin-right: 0px;
             }
