@@ -15,24 +15,18 @@ if(!empty(get_option('page_for_posts'))) {
     </div>
 </section>
 
-<?php if (have_posts()) { ?>
-<div class="container">
-<?php if(is_blog()) {
-            echo granola_render('template-parts/post/categories');
-        } ?>
-</div>
-    <?php
-    if(is_blog()) :
-            echo granola_render('template-parts/flexible-content/featured-post');
-            
+<?php if( ! is_paged() ) {
+    echo granola_render('template-parts/flexible-content/featured-post');
+} ?>
 
-    ?>
-    
-        <div class="container spacing">
-            <main>
-                <?php while (have_posts()) {
-                    the_post();
-                    ?>
+<div class="cards-section">
+    <div class="container">
+        <div class="cards-container">
+            <?php
+            $i = 0;
+            if (have_posts()) : ?>    
+            <?php while (have_posts() && $i < 6) :
+                the_post(); ?>
             <div class="card-small">
                 <div class="card-small__content">
                     <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
@@ -42,26 +36,19 @@ if(!empty(get_option('page_for_posts'))) {
                 <a href="<?php the_permalink(); ?>">
                     <div class="card-small__thumbnail">
                     <?php if (has_post_thumbnail()) {
-                        the_post_thumbnail('full', ['class' => 'img-responsive img-fit']);
+                        the_post_thumbnail('post_page', ['class' => 'img-responsive img-fit']);
                     } else { ?>
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/no-image.jpg';?>" alt="" class="img-responsive img-fit">
                     <?php } ?>
                     </div>
                 </a>
             </div>
-                    <?
-                } 
-                ?>
-            </main>
-            <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
+            <?php $i++; endwhile;
+            wp_reset_postdata();
+            endif;  ?>
         </div>
-        <?php else : ?>
-    <?php endif; ?>
-    
-<?php } else { ?>
-    <main class="container">
-        <?php echo granola_render('template-parts/content-none'); ?>
-    </main>
-<?php } ?>
+        <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
+    </div>
+</div>
 
 <?php get_footer();?>
