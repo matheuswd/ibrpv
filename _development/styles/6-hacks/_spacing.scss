@@ -1,7 +1,7 @@
 .spacing {
-    margin-top: em(140);
+    margin-top: em(50);
 
     @include mq(medium) {
-        margin-top: em(130);
+        margin-top: em(60);
     }
 }

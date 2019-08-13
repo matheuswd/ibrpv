@@ -2,6 +2,8 @@
 
 $args = wp_parse_args($args, [
     'show_posts' => $args['show_posts'],
+    'number_of_posts' => 3,
+    'categories' => array(),
 ]);
 
 if ($args['show_posts']) {
@@ -34,8 +36,9 @@ if ($args['show_posts']) {
     $query_args = array(
         'post_type' => 'post',
         'order' => 'DESC',
-        'posts_per_page' => 3,
+        'posts_per_page' => $args['number_of_posts'],
         'post__not_in' => $ignored_posts,
+        'cat' => $args['categories']
     );
     
     $query = new WP_Query($query_args);
