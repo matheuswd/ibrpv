@@ -5,6 +5,44 @@ if(!empty(get_option('page_for_posts'))) {
     $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')), 'full');
     $featured_image = $img[0];
 }
+
+$query_args = array(
+    'post_type' => 'post',
+    'order' => 'DESC',
+    'posts_per_page' => 1,
+    'meta_query' => array(
+        'relation' => 'AND',
+        array(
+            'key' => 'featured_post',
+            'value' => 1,
+            'compare' => '='
+        )
+    )
+);
+
+$query = new WP_Query($query_args);
+
+$ignored_posts = array();
+
+if ($query->have_posts()) :
+    while ($query->have_posts()) :
+        $query->the_post();
+        $id = array_push($ignored_posts, get_the_ID());
+    endwhile;
+    wp_reset_postdata();
+endif;
+
+$query_args = array(
+    'post_type' => 'post',
+    'order' => 'DESC',
+    'posts_per_page' => 6,
+    'post__not_in' => $ignored_posts,
+    'cat' => $args['categories']
+);
+
+$query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+
+$query = new WP_Query($query_args);
 ?>
 
 <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<?php echo $featured_image; ?>')">
@@ -24,9 +62,9 @@ if(!empty(get_option('page_for_posts'))) {
         <div class="cards-container">
             <?php
             $i = 0;
-            if (have_posts()) : ?>    
-            <?php while (have_posts() && $i < 6) :
-                the_post(); ?>
+            if ($query->have_posts()) : ?>    
+            <?php while ($query->have_posts()) :
+                $query->the_post(); ?>
             <div class="card-small">
                 <div class="card-small__content">
                     <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
