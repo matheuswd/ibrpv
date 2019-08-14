@@ -29,6 +29,9 @@
         .burger__line {
             background-color: color('dark-blue');
         }
+        .main-menu>.menu-item a:hover {
+            color: color('dark-blue');
+        }
     }
 
     &-wrap {

@@ -62,9 +62,25 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d31d582c7ecb",
-            "label": "Texto para \"conhecer mais sobre a igreja\"",
-            "name": "learn_more",
+            "key": "field_5d53291fea0a4",
+            "label": "Venha nos visitar",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d53293eea0a5",
+            "label": "Horários",
+            "name": "time_entry",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -81,10 +97,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d31d5a6c7ecc",
-            "label": "URL para \"conhecer mais sobre a igreja\"",
-            "name": "learn_more_url",
-            "type": "url",
+            "key": "field_5d532962ea0a6",
+            "label": "Endereço",
+            "name": "Address",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -94,7 +110,29 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d53296fea0a7",
+            "label": "Link Google Maps",
+            "name": "gmaps_address",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5d19a6ff4ae04",
@@ -250,5 +288,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1563547133
+    "modified": 1565731199
 }
