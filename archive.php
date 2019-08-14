@@ -16,17 +16,13 @@ if(!empty(get_option('page_for_posts'))) {
 </section>
 
 <?php if (have_posts()) { ?>
-<div class="container">
-<?php if(is_blog()) {
-            echo granola_render('template-parts/post/categories');
-        }
-        ?>
-</div>
-<div class="container spacing">
-    <main>
-    <?php echo granola_render('template-parts/flexible-content/all-posts', array('show_posts' => true, 'number_of_posts' => 9, 'categories' => array(get_queried_object()->term_id) )); ?>
-    </main>
-    <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
+<div class="fullwidth-grey">
+    <div class="container">
+        <main>
+        <?php echo granola_render('template-parts/flexible-content/all-posts', array('show_posts' => true, 'number_of_posts' => -1, 'categories' => array(get_queried_object()->term_id) )); ?>
+        </main>
+        <?php echo granola_render('template-parts/wordpress/posts-pagination'); ?>
+    </div>
 </div>
     
 <?php } else { ?>
