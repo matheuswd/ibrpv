@@ -7,3 +7,48 @@
     width: 100%;
     background-color: color('white');
 }
+
+.categories-list {
+    padding: space('gutter') (space('gutter') / 2);
+    text-transform: uppercase;
+
+    .container {
+        @include no-first-last-margin;
+    }
+    ul {
+        @include list-reset-hard;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            font-size: $tiny-font-size;
+            margin-right: space('gutter');
+            color: color('red');
+
+            a {
+                text-decoration: none;
+            }
+
+            &:after {
+                margin-left: space('gutter');
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include mq(medium) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        ul li{
+            font-size: $small-font-size;
+            letter-spacing: 0.5px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
