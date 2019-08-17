@@ -53,6 +53,17 @@ $query = new WP_Query($query_args);
     </div>
 </section>
 
+<section class="fullwidth-white categories-list">
+    <div class="container">
+        <ul>
+            <?php wp_list_categories( array(
+                'title_li' => '',
+                'exclude' => 1,
+            ) ); ?>
+        </ul>
+    </div>
+</section>
+
 <?php if( ! is_paged() ) {
     echo granola_render('template-parts/flexible-content/featured-post');
 } ?>
