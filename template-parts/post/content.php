@@ -17,13 +17,26 @@
                 <?php the_date('d/m/Y'); ?> | 
                 <span><?php the_category(' • '); ?></span>
             </span>
+            <?php the_content(); ?>
+        </section>
+        <section class="post-categories">
+            <?php // the_content(); ?>
+        </section>
+        <section class="sharing">
+            <span><?php esc_html_e('Compartilhar', 'ibrpv') ?></span>
+            <div class="icons">
+                <div class="icons__fb">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank">
+                        <?php echo granola_image('social-icons/icon-fb-grey.png', array(
+                            'alt' => __('Ícone de compartilhamento do Facebook', 'ibrpv')
+                        )) ?>
+                    </a>
+                </div>
+            </div>
+        </section>
         <?php
-        if (is_single() || is_category()) :
-            the_title('<h1 class="entry-title">', '</h1>');
-            the_content();
         endif;
         ?>
-    </header>
 
     <footer class="entry-footer">
 
