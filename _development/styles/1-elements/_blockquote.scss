@@ -4,5 +4,7 @@ blockquote {
     padding: space(paragraph);
     margin-right: 0;
     margin-left: 0;
+    font-style: italic;
+    font-weight: bold;
     border-left: (space(paragraph) / 2) solid currentColor;
 }
