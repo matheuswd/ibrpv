@@ -70,6 +70,7 @@ $query = new WP_Query($query_args);
 
 <div class="cards-section">
     <div class="container">
+        <h2 class="latest-posts"><?php esc_html_e('Últimas', 'ibrpv'); ?><span><?php esc_html_e('Postagens', 'ibrpv'); ?></span></h2>
         <div class="cards-container">
             <?php
             $i = 0;
