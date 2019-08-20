@@ -7,11 +7,14 @@
  * @package Granola
  */
 
-if (!is_active_sidebar('sidebar-1')) {
-    return;
-}
 ?>
 
-<aside class="widget-area">
-    <?php dynamic_sidebar('sidebar-1'); ?>
-</aside>
+<section class="post-categories">
+    <p class="post-categories__heading">
+        <?php esc_html_e('Categorias', 'ibrpv'); ?>
+    </p>
+    <?php wp_list_categories(array(
+            'title_li' => '',
+            'exclude'  => 1 // Removes the Uncategorized
+        )); ?>
+</section>

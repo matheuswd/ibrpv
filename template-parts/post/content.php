@@ -19,9 +19,7 @@
             </span>
             <?php the_content(); ?>
         </section>
-        <section class="post-categories">
-            <?php // the_content(); ?>
-        </section>
+        <?php get_sidebar(); ?>
         <section class="sharing">
             <span><?php esc_html_e('Compartilhar', 'ibrpv') ?></span>
             <div class="icons">
