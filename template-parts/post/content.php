@@ -9,7 +9,14 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
+        <?php
+        if (is_single()) :
+        ?>
+        <section class="post-content">
+            <span class="post-info">
+                <?php the_date('d/m/Y'); ?> | 
+                <span><?php the_category(' • '); ?></span>
+            </span>
         <?php
         if (is_single() || is_category()) :
             the_title('<h1 class="entry-title">', '</h1>');
