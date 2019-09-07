@@ -84,6 +84,25 @@ article {
         &__email {
             width: 40px;
             margin-right: 10px;
+
+            a > * {
+                border-radius: 2px;
+            }
         }
     }
+
+    @include mq( $until:small ) {
+        flex-flow: column-reverse;
+        flex-direction: column;
+        border-bottom: none;
+
+        .icons {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+}
+
+.related-posts {
+    margin-top: 60px;
 }
