@@ -34,7 +34,7 @@
 						</a>
 					</div>
 					<div class="icons__twitter">
-						<a href="https://twitter.com/intent/tweet?text=<?php the_title(); echo ' em ' . get_permalink(); ?>" target="_blank">
+						<a href="https://twitter.com/intent/tweet?text=<?php the_title(); echo get_permalink(); ?>" target="_blank">
 							<?php
 							echo granola_svg(
 								'twitter-icon',
