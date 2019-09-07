@@ -75,11 +75,15 @@ article {
     }
 
     .icons {
+        display: flex;
         width: 100%;
-        margin-left: space(gutter);
+        margin-left: 9px;
 
-        &__fb {
+        &__fb,
+        &__twitter,
+        &__email {
             width: 40px;
+            margin-right: 10px;
         }
     }
 }
