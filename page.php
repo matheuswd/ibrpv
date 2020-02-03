@@ -23,8 +23,8 @@ if (is_home()) {
             <?php } ?>
         </main>
 
-        <?php echo granola_render('template-parts/wordpress/paged-post'); ?>
-        <?php echo granola_render('template-parts/wordpress/post-pagination'); ?>
+        <?php // echo granola_render('template-parts/wordpress/paged-post'); ?>
+        <?php // echo granola_render('template-parts/wordpress/post-pagination'); ?>
         <?php //echo granola_render('template-parts/wordpress/comments'); ?>
     </div>
 <?php } else { ?>
