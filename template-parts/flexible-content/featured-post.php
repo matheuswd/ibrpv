@@ -48,7 +48,7 @@ if ($query->have_posts()) : ?>
             </div>
             <div class="featured-post__content">
                 <p><?php the_category(' • '); ?></p>
-                <h1><?php the_title(); ?></h1>
+                <a class="reset-link" href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
                 <p class="subtitle">
                     <?php echo get_post_meta( get_the_ID() , 'subtitle', true) ?>
                 </p>
