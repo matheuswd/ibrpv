@@ -91,6 +91,12 @@
             margin-bottom: 0;
         }
 
+        &:hover {
+            background-color: color('white');
+            color: color('dark-blue');
+            border-radius: 90px;
+        }
+
         // ----------------------------------------------
         // All links in the nav
         // ----------------------------------------------
@@ -106,16 +112,20 @@
             }
 
             &:hover {
-                color: rgba(color('white'), 0.8);
                 text-decoration: none;
             }
         }
     }
-
+    
     .current-menu-item {
-        border-bottom: 2px solid color('white');
-    }
+        background-color: color('white');
+        color: color('dark-blue');
 
+        a {
+            font-weight: 700;
+        }
+    }
+    
     // ----------------------------------------------
     // Top level menu
     // ----------------------------------------------
@@ -162,10 +172,12 @@
                 }
             }
 
+            border-radius: 0px;
+
             @include mq(menu) {
-                padding: 6px space('gutter--desktop');
-                margin-left: -#{space('gutter')};
-                border-radius: $small-border-radius;
+                padding: 2px space('gutter--desktop') / 2;
+                margin-left: #{space('gutter')};
+                border-radius: 90px;
 
                 &:last-child {
                     margin-right: 0;
@@ -314,6 +326,20 @@
 
             > .sub-menu {
                 display: flex;
+            }
+        }
+
+        &:hover {
+            @include mq(menu) {
+                border-radius: 20px;
+
+                .sub-menu {
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+            }
+            .sub-menu-toggle {
+                color: color('dark-blue');
             }
         }
     }
