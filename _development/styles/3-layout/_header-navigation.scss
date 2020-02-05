@@ -125,7 +125,16 @@
             font-weight: 700;
         }
     }
-    
+
+    .current-menu-ancestor {
+        background-color: color('white');
+        color: color('dark-blue');
+
+        .sub-menu-toggle {
+            color: color('dark-blue');
+        }
+    }
+
     // ----------------------------------------------
     // Top level menu
     // ----------------------------------------------
