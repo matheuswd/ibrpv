@@ -22,16 +22,27 @@
         // transition: background-color 300ms linear;
         color: color('dark-blue');
 
-        .current-menu-item {
+        .current-menu-item,
+        .current-menu-ancestor {
             background-color: color('dark-blue');
             color: color('white');
+            
+            .sub-menu-toggle {
+                color: color('white');
+            }
         }
 
+        .sub-menu-toggle {
+            color: color('dark-blue');
+        }
+
+
         .menu-item {
+            border-bottom: none;
             &:hover {
                 background-color: color('dark-blue');
                 color: color('white');
-                border-radius: 0px;
+                border-radius: 90px;
                 border-bottom: none;
             }
         }
