@@ -18,19 +18,52 @@
     }
 
     &.scrolled {
-        background-color: color('light-grey'); // for test only
-        transition: background-color 300ms linear;
+        background-color: color('light-grey');
+        // transition: background-color 300ms linear;
         color: color('dark-blue');
 
         .current-menu-item {
-            border-bottom: 2px solid color('dark-blue');
+            background-color: color('dark-blue');
+            color: color('white');
+        }
+
+        .menu-item {
+            &:hover {
+                background-color: color('dark-blue');
+                color: color('white');
+                border-radius: 0px;
+                border-bottom: none;
+            }
         }
 
         .burger__line {
             background-color: color('dark-blue');
         }
-        .main-menu>.menu-item a:hover {
-            color: color('dark-blue');
+
+        li.menu-item-has-children {
+            &:hover {
+                background-color: color('dark-blue');
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+
+                > a {
+                    color: white;
+                }
+                
+                .sub-menu-toggle {
+                    color: white;
+                }
+
+                .sub-menu {
+                    background-color: color('dark-blue');
+                    
+
+                    > li a {
+                        color: white;
+                    }
+                }
+            }
+            
         }
     }
 
