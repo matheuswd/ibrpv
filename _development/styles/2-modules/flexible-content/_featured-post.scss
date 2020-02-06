@@ -28,7 +28,7 @@
 
         h1 {
             font-family: $heading-font-family-bold;
-            color: color('grey');
+            color: color('dark-blue');
         }
 
         p {
@@ -63,7 +63,7 @@
 
 
         &__thumbnail {
-            width: 60%;
+            width: 50%;
 
             img {
                 width: 100%;
@@ -71,7 +71,7 @@
         }
     
         &__content {
-            width: 40%;
+            width: 50%;
             padding: 0 space('gutter') space('gutter') (space('gutter--desktop') * 3);
             position: relative;
             display: grid;
@@ -84,7 +84,7 @@
                 }
     
                 &.subtitle {
-                    font-size: $large-font-size;
+                    font-size: $medium-font-size * 1.5;
                     line-height: space('gutter--desktop') * 1.2;
                     margin-top: space('gutter') / 3;
                     font-family: $heading-font-family-bold-a;
